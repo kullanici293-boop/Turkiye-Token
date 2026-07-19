@@ -1,698 +1,679 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TÜRKİYE Token | United by Culture. Powered by Blockchain.</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- Google Fonts: Orbitron for Sci-Fi UI, Inter for clean typography -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
-    
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #030303;
-            color: #ffffff;
-            overflow-x: hidden;
-        }
-        .font-display {
-            font-family: 'Orbitron', sans-serif;
-        }
-        /* Custom Premium Gradients & Glows */
-        .bg-cyber-dark {
-            background: radial-gradient(circle at 50% 50%, #150505 0%, #030303 100%);
-        }
-        .text-glow-red {
-            text-shadow: 0 0 15px rgba(239, 68, 68, 0.6), 0 0 30px rgba(239, 68, 68, 0.3);
-        }
-        .text-glow-gold {
-            text-shadow: 0 0 15px rgba(234, 179, 8, 0.5), 0 0 30px rgba(234, 179, 8, 0.2);
-        }
-        .border-glow-red {
-            box-shadow: 0 0 15px rgba(239, 68, 68, 0.2);
-            border-color: rgba(239, 68, 68, 0.4);
-        }
-        .glass-panel {
-            background: rgba(15, 15, 15, 0.7);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        .glass-card-gold {
-            background: linear-gradient(135deg, rgba(234, 179, 8, 0.03) 0%, rgba(0, 0, 0, 0.6) 100%);
-            backdrop-filter: blur(16px);
-            border: 1px solid rgba(234, 179, 8, 0.15);
-        }
-        .glass-card-red {
-            background: linear-gradient(135deg, rgba(239, 68, 68, 0.05) 0%, rgba(0, 0, 0, 0.6) 100%);
-            backdrop-filter: blur(16px);
-            border: 1px solid rgba(239, 68, 68, 0.15);
-        }
-        /* Keyframe Animations */
-        @keyframes float-slow {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-15px) rotate(3deg); }
-        }
-        @keyframes float-delayed {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-12px) rotate(-3deg); }
-        }
-        @keyframes pulse-energy {
-            0%, 100% { opacity: 0.3; transform: scale(1); }
-            50% { opacity: 0.6; transform: scale(1.05); }
-        }
-        @keyframes scanline {
-            0% { transform: translateY(-100%); }
-            100% { transform: translateY(100%); }
-        }
-        .animate-float {
-            animation: float-slow 6s ease-in-out infinite;
-        }
-        .animate-float-delayed {
-            animation: float-delayed 8s ease-in-out infinite;
-        }
-        .animate-pulse-energy {
-            animation: pulse-energy 4s ease-in-out infinite;
-        }
-        /* Hide scrollbars but keep functionality */
-        ::-webkit-scrollbar {
-            width: 6px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #030303;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #ef4444;
-            border-radius: 3px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TÜRKİYE Token 🇹🇷 | United by Culture. Powered by Blockchain.</title>
+
+<meta name="description" content="TÜRKİYE Token - A global Web3 community movement powered by Turkish culture, blockchain and community strength.">
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 </head>
-<body class="bg-cyber-dark antialiased">
 
-    <!-- CINEMATIC INTRO LOADING SCREEN -->
-    <div id="intro-overlay" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#030303] transition-opacity duration-1000">
-        <div class="relative flex flex-col items-center">
-            <!-- Animated Particle Core Background -->
-            <div class="absolute w-72 h-72 bg-red-600/10 rounded-full blur-3xl animate-pulse"></div>
-            <!-- Procedural SVG Icon System / Red & Gold Particles Forming Flag Silhouette -->
-            <svg class="w-24 h-24 mb-6 animate-pulse text-red-500" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="45" stroke="url(#goldGrad)" stroke-width="2" stroke-dasharray="6 6"/>
-                <path d="M42 35C33.7157 35 27 41.7157 27 50C27 58.2843 33.7157 65 42 65C47.2824 65 51.9051 62.2616 54.5 58.1215C53.1 58.6811 51.5 59 49.8 59C42.1781 59 36 52.8219 36 45.2C36 40.5284 38.3228 36.4013 41.8785 34C41.9189 34 41.9594 34 42 34V35Z" fill="#ef4444" filter="drop-shadow(0 0 8px #ef4444)"/>
-                <path d="M57 41L59.5 46.5L65.5 47L61 51L62.5 57L57 54L51.5 57L53 51L48.5 47L54.5 46.5L57 41Z" fill="#eab308" filter="drop-shadow(0 0 8px #eab308)"/>
-                <defs>
-                    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#eab308" />
-                        <stop offset="100%" stop-color="#854d0e" />
-                    </linearGradient>
-                </defs>
-            </svg>
-            <h2 class="font-display text-xl tracking-[0.3em] text-white">INITIALIZING DETONATION</h2>
-            <p class="text-xs text-gray-500 tracking-widest mt-2">LOADING TÜRKİYE BLOCKCHAIN UNIVERSE...</p>
-            <div class="w-48 h-[2px] bg-neutral-900 mt-4 rounded-full overflow-hidden">
-                <div class="h-full bg-gradient-to-r from-red-600 to-yellow-500 w-full origin-left transition-transform duration-1000 ease-out" id="loading-bar" style="transform: scaleX(0);"></div>
-            </div>
-        </div>
-    </div>
+<body>
 
-    <!-- STICKY NAVIGATION BAR -->
-    <header class="fixed top-0 left-0 w-full z-40 glass-panel border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Logo Element -->
-            <a href="#" class="flex items-center space-x-3 group">
-                <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-red-600 to-yellow-500 p-[1px] shadow-lg shadow-red-900/20">
-                    <div class="w-full h-full bg-[#0d0d0d] rounded-full flex items-center justify-center overflow-hidden relative">
-                        <!-- Tiny Vector Crescent -->
-                        <svg class="w-5 h-5 text-red-500 transform group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15.5c-3.03 0-5.5-2.47-5.5-5.5s2.47-5.5 5.5-5.5c.53 0 1.04.08 1.52.22-.97.79-1.6 1.98-1.6 3.31 0 2.34 1.9 4.24 4.24 4.24 1.22 0 2.32-.52 3.1-1.35-.33 2.53-2.48 4.58-5.26 4.58z"/>
-                        </svg>
-                    </div>
-                </div>
-                <span class="font-display text-lg font-black tracking-wider text-white">TÜRKİYE <span class="text-red-500">TOKEN</span></span>
-            </a>
 
-            <!-- Menu Navigation Links -->
-            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide text-gray-400">
-                <a href="#hero" class="hover:text-white transition-colors">Home</a>
-                <a href="#about" class="hover:text-white transition-colors">About</a>
-                <a href="#dashboard" class="hover:text-white transition-colors">Dashboard</a>
-                <a href="#tokenomics" class="hover:text-white transition-colors">Tokenomics</a>
-                <a href="#roadmap" class="hover:text-white transition-colors">Roadmap</a>
-                <a href="#community" class="hover:text-white transition-colors">Community</a>
-                <a href="#how-to-buy" class="hover:text-white transition-colors">How To Buy</a>
-            </nav>
+<!-- LOADING SCREEN -->
 
-            <!-- Action Buttons -->
-            <div class="flex items-center space-x-4">
-                <a href="#how-to-buy" class="hidden sm:inline-flex items-center justify-center px-5 py-2 text-xs font-bold tracking-widest text-black bg-yellow-500 hover:bg-yellow-400 transition-all rounded-sm uppercase font-display">
-                    Buy Now
-                </a>
-                <a href="https://t.me/" target="_blank" class="inline-flex items-center justify-center px-5 py-2 text-xs font-bold tracking-widest text-white bg-red-600 hover:bg-red-500 transition-all rounded-sm uppercase font-display border border-red-500/30 shadow-lg shadow-red-600/20">
-                    Join Telegram
-                </a>
-            </div>
-        </div>
-    </header>
+<div id="loader">
 
-    <!-- FLOATING AI MASCOT ASSISTANT BUTTON -->
-    <div class="fixed bottom-6 right-6 z-40 group">
-        <div class="absolute -top-16 right-0 bg-neutral-900 border border-red-500/30 text-white text-xs py-2 px-3 rounded-lg shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none w-48 font-medium">
-            <span class="text-yellow-500 font-bold block mb-1">Asena AI v1.0:</span> "Welcome explorer! Need help navigating our ecosystem?"
-        </div>
-        <button class="w-14 h-14 rounded-full bg-gradient-to-b from-red-500 to-red-700 flex items-center justify-center shadow-lg shadow-red-600/40 border border-yellow-500/40 relative animate-float">
-            <!-- Vector Mascot Graphic (Eagle Helmet Silhouette) -->
-            <svg class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2L3 7V12C3 17 7 21 12 22C17 21 21 17 21 12V7L12 2Z" stroke="currentColor" stroke-width="2"/>
-                <path d="M12 6L8 10H16L12 6Z" fill="#eab308"/>
-                <path d="M9 13C9.5 13 10 12.5 10 12C10 11.5 9.5 11 9 11C8.5 11 8 11.5 8 12C8 12.5 8.5 13 9 13Z" fill="currentColor"/>
-                <path d="M15 13C15.5 13 16 12.5 16 12C16 11.5 15.5 11 15 11C14.5 11 14 11.5 14 12C14 12.5 14.5 13 15 13Z" fill="currentColor"/>
-            </svg>
-            <span class="absolute top-0 right-0 w-3 h-3 bg-green-500 border-2 border-neutral-950 rounded-full"></span>
-        </button>
-    </div>
+<div class="loader-symbol">
+🇹🇷
+</div>
 
-    <!-- MAIN HERO SECTION -->
-    <section id="hero" class="relative pt-36 pb-24 overflow-hidden min-h-screen flex items-center">
-        <!-- Digital Turkish World Background Art Canvas Layer -->
-        <div class="absolute inset-0 opacity-20 pointer-events-none mix-blend-screen bg-cover bg-center" style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"100\" height=\"100\" viewBox=\"0 0 100 100\"><circle cx=\"50\" cy=\"50\" r=\"1\" fill=\"%23ef4444\" opacity=\"0.5\"/><line x1=\"0\" y1=\"50\" x2=\"100\" y2=\"50\" stroke=\"%23ffffff\" stroke-width=\"0.05\" opacity=\"0.1\"/><line x1=\"50\" y1=\"0\" x2=\"50\" y2=\"100\" stroke=\"%23ffffff\" stroke-width=\"0.05\" opacity=\"0.1\"/></svg>');"></div>
-        
-        <!-- Cyber Map / Glowing Grid Energy Matrix Layer -->
-        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_20%,#030303_80%)]"></div>
+<h2>TÜRKİYE TOKEN</h2>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                
-                <!-- Hero Left: Messaging and CTA Data Stack -->
-                <div class="lg:col-span-7 text-center lg:text-left">
-                    <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-red-950/40 border border-red-500/20 mb-6 text-xs font-semibold tracking-wider text-red-400 uppercase">
-                        <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
-                        <span>THE GLOBAL WEB3 MOVEMENT IS LIVE</span>
-                    </div>
-                    <h1 class="font-display text-4xl sm:text-6xl font-black tracking-tight leading-none mb-6">
-                        TÜRKİYE TOKEN<br>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-yellow-500 to-white text-glow-red">
-                            United by Culture.<br>Powered by Blockchain.
-                        </span>
-                    </h1>
-                    <p class="text-gray-400 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 mb-8 font-light leading-relaxed">
-                        A premium, community-driven ecosystem bringing historical legacy, global unity, and hyper-scalable Solana network innovation into one decentralized collective force.
-                    </p>
+<p>Entering Web3 Universe...</p>
 
-                    <!-- Interactive Animated Button Elements -->
-                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-12">
-                        <a href="#how-to-buy" class="w-full sm:w-auto px-8 py-4 font-display text-sm font-bold tracking-widest text-black bg-gradient-to-r from-yellow-500 to-amber-400 hover:from-yellow-400 hover:to-amber-300 rounded-sm transform hover:-translate-y-0.5 transition-all shadow-lg shadow-yellow-600/10 text-center uppercase">
-                            BUY TOKEN
-                        </a>
-                        <a href="https://t.me" class="w-full sm:w-auto px-8 py-4 font-display text-sm font-bold tracking-widest text-white bg-neutral-900 hover:bg-neutral-800 rounded-sm transform hover:-translate-y-0.5 transition-all border border-white/10 text-center uppercase">
-                            JOIN COMMUNITY
-                        </a>
-                        <a href="#about" class="w-full sm:w-auto px-8 py-4 font-display text-sm font-bold tracking-widest text-gray-400 hover:text-white rounded-sm transition-all text-center uppercase">
-                            EXPLORE PROJECT
-                        </a>
-                    </div>
+</div>
 
-                    <!-- Live Token Statistics Interface Widget Components -->
-                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto lg:mx-0">
-                        <div class="glass-panel p-4 rounded-sm border border-white/5">
-                            <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Live Price</p>
-                            <p class="font-display text-lg font-bold text-yellow-500 text-glow-gold">$0.003412</p>
-                        </div>
-                        <div class="glass-panel p-4 rounded-sm border border-white/5">
-                            <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">24h Volume</p>
-                            <p class="font-display text-lg font-bold text-white">$4,892,105</p>
-                        </div>
-                        <div class="glass-panel p-4 rounded-sm border border-white/5">
-                            <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Total Holders</p>
-                            <p class="font-display text-lg font-bold text-red-500 text-glow-red">42,915</p>
-                        </div>
-                        <div class="glass-panel p-4 rounded-sm border border-white/5">
-                            <p class="text-xs text-gray-500 uppercase tracking-wider mb-1">Market Cap</p>
-                            <p class="font-display text-lg font-bold text-white">$3.41M</p>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Hero Right: Realistic 3D Coin Render Canvas and Vector Mascot Artwork Core -->
-                <div class="lg:col-span-5 flex flex-col items-center justify-center relative">
-                    <div class="relative w-80 h-80 sm:w-96 sm:h-96 animate-float flex items-center justify-center">
-                        
-                        <!-- Floating Holographic Energy Outer Halo Ring -->
-                        <div class="absolute inset-0 rounded-full border border-dashed border-red-500/40 animate-spin" style="animation-duration: 20s;"></div>
-                        <div class="absolute inset-6 rounded-full border border-yellow-500/20 animate-spin" style="animation-duration: 30s; animation-direction: reverse;"></div>
-                        <div class="absolute -inset-4 bg-red-600/10 rounded-full blur-2xl animate-pulse-energy"></div>
 
-                        <!-- 3D Cryptocurrency Coin Graphic Render Layer (Complex Vector) -->
-                        <div class="w-64 h-64 sm:w-72 sm:h-72 rounded-full bg-gradient-to-br from-yellow-300 via-yellow-500 to-amber-700 p-[3px] shadow-[0_0_60px_rgba(239,68,68,0.3)] relative z-10 group">
-                            <div class="w-full h-full bg-gradient-to-tr from-amber-600 via-yellow-500 to-yellow-300 rounded-full relative overflow-hidden flex items-center justify-center p-4 shadow-inner">
-                                <!-- Inner Geometric Cultural Engravings Texture Pattern -->
-                                <div class="absolute inset-2 rounded-full border border-amber-700/40 opacity-80 bg-[radial-gradient(circle_at_center,transparent_40%,#854d0e_90%)]"></div>
-                                
-                                <!-- Core Coin Graphics: Crescent and Star + Solana Network Integrated Topology -->
-                                <div class="relative z-10 flex flex-col items-center justify-center text-center">
-                                    <svg class="w-28 h-28 text-white filter drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)]" viewBox="0 0 100 100" fill="currentColor">
-                                        <path d="M45 25C33.9543 25 25 33.9543 25 45C25 56.0457 33.9543 65 45 65C52.0543 65 58.2045 61.3516 61.666 55.8315C59.8 56.5781 57.6667 57 55.4 57C45.2381 57 37 48.7619 37 38.6C37 32.3712 40.0982 26.8711 44.836 23.67C44.891 23.67 44.9455 23.67 45 23.67V25Z" fill="#ffffff"/>
-                                        <path d="M65 33L68.3333 40.3333L76.3333 41L70.3333 46.3333L72.3333 54.3333L65 50.3333L57.6667 54.3333L59.6667 46.3333L53.6667 41L61.6667 40.3333L65 33Z" fill="#ffffff"/>
-                                    </svg>
-                                    <span class="font-display text-xs font-black tracking-[0.25em] text-amber-950 mt-2">SOLANA ECOSYSTEM</span>
-                                </div>
+<!-- NAVBAR -->
 
-                                <!-- Metallic Reflection Shader Effect Lines -->
-                                <div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/20 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></div>
-                            </div>
-                        </div>
+<header>
 
-                        <!-- Mascot Character Standing Beside Coin Graphic Element -->
-                        <div class="absolute bottom-[-20px] right-[-20px] w-36 h-36 bg-neutral-900/90 border border-yellow-500/30 rounded-xl p-3 z-20 shadow-2xl backdrop-blur-md animate-float-delayed">
-                            <div class="w-full h-full border border-red-500/20 bg-gradient-to-b from-red-950/20 to-transparent flex flex-col items-center justify-center relative rounded">
-                                <span class="absolute top-1 left-2 font-display text-[8px] tracking-widest text-yellow-500 font-bold">MASCOT // ASENA</span>
-                                <!-- Vector Mascot Artwork Preview Graphic -->
-                                <svg class="w-16 h-16 text-red-500 my-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="currentColor"/>
-                                    <path d="M2 17L12 22L22 17" stroke="#eab308" stroke-width="2"/>
-                                    <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2"/>
-                                </svg>
-                                <span class="text-[10px] text-gray-400 font-medium tracking-wide text-center">Guardian Level 1</span>
-                            </div>
-                        </div>
+<nav>
 
-                    </div>
-                </div>
+<div class="logo">
+<img src="assets/logo.png">
+<span>TÜRKİYE</span>
+</div>
 
-            </div>
-        </div>
-    </section>
 
-    <!-- SECTION 2: ABOUT THE PROJECT -->
-    <section id="about" class="py-24 relative border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                
-                <!-- Graphic Container Block -->
-                <div class="lg:col-span-5 order-2 lg:order-1 flex justify-center">
-                    <div class="w-full max-w-md glass-card-red p-8 rounded-sm relative overflow-hidden">
-                        <!-- Abstract Geometric Tech Grid Inside -->
-                        <div class="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:24px_24px]"></div>
-                        
-                        <h4 class="font-display text-sm text-yellow-500 font-bold tracking-widest mb-4">MASCOT PROFILE</h4>
-                        <!-- Mascot Presentation Visual -->
-                        <div class="w-32 h-32 mx-auto bg-gradient-to-tr from-red-600 to-yellow-500 rounded-full p-[2px] mb-6">
-                            <div class="w-full h-full bg-neutral-950 rounded-full flex items-center justify-center">
-                                <svg class="w-16 h-16 text-white" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <p class="text-sm text-gray-300 text-center italic font-light">
-                            "Asena, the Cyber Guardian Eagle, wears experimental red and gold blockchain armor engineered to protect decentralized community value across global networks."
-                        </p>
-                    </div>
-                </div>
+<div class="menu">
 
-                <!-- Strategic Storytelling Section Markup -->
-                <div class="lg:col-span-7 order-1 lg:order-2 text-center lg:text-left">
-                    <span class="font-display text-xs font-bold tracking-[0.3em] text-red-500 uppercase block mb-3">DECENTRALIZED CULTURAL SYMBOL</span>
-                    <h2 class="font-display text-3xl sm:text-4xl font-black tracking-tight mb-6">
-                        The Digital Symbol of<br>Turkish Community Power
-                    </h2>
-                    <p class="text-gray-400 font-light leading-relaxed mb-8">
-                        TÜRKİYE Token represents unity, creativity, and community strength in the Web3 era. Built by long-term ecosystem believers and powered natively by on-chain token holders, it merges legacy with modern technological advancement.
-                    </p>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#tokenomics">Tokenomics</a>
+<a href="#roadmap">Roadmap</a>
+<a href="#community">Community</a>
+<a href="#buy">How To Buy</a>
 
-                    <!-- Interactive Informational Highlights Stack -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div class="glass-panel p-5 rounded-sm border-l-2 border-l-red-500">
-                            <h3 class="font-display text-sm font-bold text-white tracking-wide mb-2">Global Movement Structure</h3>
-                            <p class="text-xs text-gray-400 font-light">Connecting thousands of unique community nodes worldwide into a unified digital culture network.</p>
-                        </div>
-                        <div class="glass-panel p-5 rounded-sm border-l-2 border-l-yellow-500">
-                            <h3 class="font-display text-sm font-bold text-white tracking-wide mb-2">Solana Ultra-Fast Speed</h3>
-                            <p class="text-xs text-gray-400 font-light">Leveraging high throughput, low latency architecture to enable micro-transactions and secure utility.</p>
-                        </div>
-                    </div>
-                </div>
+</div>
 
-            </div>
-        </div>
-    </section>
 
-    <!-- SECTION 3: TOKEN CRYPTO DASHBOARD -->
-    <section id="dashboard" class="py-24 relative bg-black/40 border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="font-display text-xs font-bold tracking-[0.3em] text-yellow-500 uppercase block mb-3">REALTIME ECOSYSTEM LEDGER</span>
-                <h2 class="font-display text-3xl sm:text-4xl font-black tracking-tight">Ecosystem Control Center</h2>
-            </div>
+<div class="nav-buttons">
 
-            <!-- Glassmorphic Terminal Layout Grid -->
-            <div class="glass-card-gold p-6 sm:p-8 rounded-lg max-w-4xl mx-auto relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-64 h-64 bg-yellow-500/5 rounded-full blur-3xl"></div>
-                
-                <!-- Terminal Decorative Navbar Header Row -->
-                <div class="flex items-center justify-between border-b border-white/5 pb-4 mb-6">
-                    <div class="flex items-center space-x-2">
-                        <span class="w-3 h-3 rounded-full bg-red-500/40"></span>
-                        <span class="w-3 h-3 rounded-full bg-yellow-500/40"></span>
-                        <span class="w-3 h-3 rounded-full bg-green-500/40"></span>
-                        <span class="text-xs text-gray-500 font-mono tracking-widest pl-2">SOLANA_MAINNET_NODE_ACTIVE</span>
-                    </div>
-                    <span class="text-[10px] bg-red-950/80 text-red-400 border border-red-900 px-2 py-0.5 rounded uppercase font-mono tracking-wider">SECURE DATA FEED</span>
-                </div>
+<a class="gold-btn">
+Buy Now
+</a>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <!-- Left Column Matrix Parameters -->
-                    <div class="space-y-4">
-                        <div class="flex items-center justify-between p-4 rounded bg-white/5 border border-white/5">
-                            <span class="text-sm text-gray-400 font-light">Token Name</span>
-                            <span class="font-display text-sm font-bold text-white">TÜRKİYE Token</span>
-                        </div>
-                        <div class="flex items-center justify-between p-4 rounded bg-white/5 border border-white/5">
-                            <span class="text-sm text-gray-400 font-light">Blockchain Architecture</span>
-                            <span class="font-display text-sm font-bold text-green-400 flex items-center">
-                                <span class="w-1.5 h-1.5 rounded-full bg-green-400 mr-2"></span>Solana Network
-                            </span>
-                        </div>
-                        <div class="flex items-center justify-between p-4 rounded bg-white/5 border border-white/5">
-                            <span class="text-sm text-gray-400 font-light">Ticker Symbol</span>
-                            <span class="font-display text-sm font-bold text-yellow-500">TÜRKİYE</span>
-                        </div>
-                    </div>
+<a class="red-btn">
+Telegram
+</a>
 
-                    <!-- Right Column Matrix Parameters -->
-                    <div class="space-y-4">
-                        <div class="flex items-center justify-between p-4 rounded bg-white/5 border border-white/5">
-                            <span class="text-sm text-gray-400 font-light">Total Token Supply</span>
-                            <span class="font-display text-sm font-bold text-white">1,000,000,000</span>
-                        </div>
-                        <div class="flex items-center justify-between p-4 rounded bg-white/5 border border-white/5">
-                            <span class="text-sm text-gray-400 font-light">Liquidity Verification</span>
-                            <span class="font-display text-sm font-bold text-red-400 uppercase tracking-wider text-glow-red">100% BURNED</span>
-                        </div>
-                        <div class="flex items-center justify-between p-4 rounded bg-white/5 border border-white/5">
-                            <span class="text-sm text-gray-400 font-light">Ownership Hierarchy</span>
-                            <span class="font-display text-sm font-bold text-white uppercase tracking-wider">RENOUNCED</span>
-                        </div>
-                    </div>
-                </div>
+</div>
 
-                <!-- Blockchain Smart Contract Address Subsystem Component -->
-                <div class="mt-6 p-4 rounded bg-black/60 border border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <div class="w-full">
-                        <span class="text-[10px] text-gray-500 uppercase tracking-widest font-mono block mb-1">Official Solana Contract Address</span>
-                        <span class="text-xs sm:text-sm font-mono text-gray-300 break-all select-all block">Turk1111111111111111111111111111111111111111</span>
-                    </div>
-                    <button class="w-full sm:w-auto px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-xs font-bold font-display tracking-widest text-white transition-all whitespace-nowrap border border-white/10 rounded-sm">
-                        COPY CONTRACT
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- SECTION 4: INTERACTIVE TOKENOMICS -->
-    <section id="tokenomics" class="py-24 relative border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="font-display text-xs font-bold tracking-[0.3em] text-red-500 uppercase block mb-3">TRANSPARENT DISTRIBUTION MATH</span>
-                <h2 class="font-display text-3xl sm:text-4xl font-black tracking-tight">On-Chain Asset Allocation</h2>
-            </div>
+</nav>
 
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center max-w-5xl mx-auto">
-                <!-- Left Column Layout Block: Tokenomics Metrics Categories -->
-                <div class="lg:col-span-6 space-y-4">
-                    <div class="glass-panel p-5 rounded-sm flex items-center justify-between border-l-4 border-l-yellow-500">
-                        <div>
-                            <h3 class="font-display text-base font-bold text-white tracking-wide">Liquidity Pool Injection</h3>
-                            <p class="text-xs text-gray-400 font-light mt-1">Locked forever to maintain smooth community exchange matching.</p>
-                        </div>
-                        <span class="font-display text-2xl font-black text-yellow-500 pl-4">60%</span>
-                    </div>
-                    <div class="glass-panel p-5 rounded-sm flex items-center justify-between border-l-4 border-l-red-500">
-                        <div>
-                            <h3 class="font-display text-base font-bold text-white tracking-wide">Community Staking Rewards</h3>
-                            <p class="text-xs text-gray-400 font-light mt-1">Distributed dynamically via internal growth initiatives.</p>
-                        </div>
-                        <span class="font-display text-2xl font-black text-red-500 pl-4">20%</span>
-                    </div>
-                    <div class="glass-panel p-5 rounded-sm flex items-center justify-between border-l-4 border-l-white">
-                        <div>
-                            <h3 class="font-display text-base font-bold text-white tracking-wide">Global Marketing Campaigns</h3>
-                            <p class="text-xs text-gray-400 font-light mt-1">Sustained funding for key exchange listings and visibility assets.</p>
-                        </div>
-                        <span class="font-display text-2xl font-black text-white pl-4">10%</span>
-                    </div>
-                    <div class="glass-panel p-5 rounded-sm flex items-center justify-between border-l-4 border-l-neutral-700">
-                        <div>
-                            <h3 class="font-display text-base font-bold text-white tracking-wide">Infrastructure Development</h3>
-                            <p class="text-xs text-gray-400 font-light mt-1">Ecosystem application and future cross-chain pipeline buildout.</p>
-                        </div>
-                        <span class="font-display text-2xl font-black text-gray-400 pl-4">10%</span>
-                    </div>
-                </div>
+</header>
 
-                <!-- Right Column Layout Block: Vector Distribution Donut Chart Graphics Display -->
-                <div class="lg:col-span-6 flex justify-center">
-                    <div class="relative w-72 h-72 sm:w-80 sm:h-80 flex items-center justify-center animate-float">
-                        <svg class="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
-                            <!-- Liquidity: 60% (Circumference = 2 * pi * r; r=35 -> C~220; 60% of 220 = 132) -->
-                            <circle cx="50" cy="50" r="35" stroke="#eab308" stroke-width="12" stroke-dasharray="132 220" stroke-dashoffset="0" fill="transparent" />
-                            <!-- Rewards: 20% (20% of 220 = 44) -->
-                            <circle cx="50" cy="50" r="35" stroke="#ef4444" stroke-width="12" stroke-dasharray="44 220" stroke-dashoffset="-132" fill="transparent" />
-                            <!-- Marketing: 10% (10% of 220 = 22) -->
-                            <circle cx="50" cy="50" r="35" stroke="#ffffff" stroke-width="12" stroke-dasharray="22 220" stroke-dashoffset="-176" fill="transparent" />
-                            <!-- Development: 10% (10% of 220 = 22) -->
-                            <circle cx="50" cy="50" r="35" stroke="#404040" stroke-width="12" stroke-dasharray="22 220" stroke-dashoffset="-198" fill="transparent" />
-                        </svg>
-                        <div class="absolute inset-16 bg-neutral-950 rounded-full border border-white/5 flex flex-col items-center justify-center text-center shadow-inner">
-                            <span class="font-display text-xs text-gray-500 uppercase tracking-widest">TOTAL</span>
-                            <span class="font-display text-lg font-black text-white">100% Verified</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- SECTION 5: CINEMATIC TIMELINE ROADMAP -->
-    <section id="roadmap" class="py-24 relative bg-black/20 border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-20">
-                <span class="font-display text-xs font-bold tracking-[0.3em] text-yellow-500 uppercase block mb-3">STRATEGIC EXPANSION MAP</span>
-                <h2 class="font-display text-3xl sm:text-4xl font-black tracking-tight">The Growth Pipeline</h2>
-            </div>
 
-            <!-- Cinematic Evolutionary Roadmap Modules Stack Layout -->
-            <div class="relative max-w-4xl mx-auto pl-6 sm:pl-0">
-                <!-- Center Vector Line Sub-Track Layout Overlay -->
-                <div class="absolute left-[9px] sm:left-1/2 top-0 h-full w-[2px] bg-gradient-to-b from-red-600 via-yellow-500 to-neutral-900 transform sm:-translate-x-1/2"></div>
 
-                <!-- Phase 1 Content Card -->
-                <div class="relative mb-12 sm:mb-16 flex flex-col sm:flex-row items-start sm:justify-between group">
-                    <div class="absolute left-[-23px] sm:left-1/2 w-4 h-4 rounded-full bg-red-500 border-4 border-neutral-950 z-10 transform sm:-translate-x-1/2 sm:top-1 group-hover:scale-120 transition-transform"></div>
-                    <div class="w-full sm:w-[45%] bg-neutral-900/60 p-6 rounded border border-white/5 relative glass-panel">
-                        <span class="font-display text-xs text-red-500 font-bold tracking-widest block mb-1">PHASE 01</span>
-                        <h3 class="font-display text-xl font-bold text-white mb-4">Genesis Foundation</h3>
-                        <ul class="space-y-2 text-sm text-gray-400 font-light">
-                            <li class="flex items-center"><span class="w-1.5 h-1.5 bg-red-500 rounded-full mr-2"></span>Premium Platform Core Launch</li>
-                            <li class="flex items-center"><span class="w-1.5 h-1.5 bg-red-500 rounded-full mr-2"></span>Initial Community Base Growth</li>
-                            <li class="flex items-center"><span class="w-1.5 h-1.5 bg-red-500 rounded-full mr-2"></span>Global Infrastructure Hardening</li>
-                        </ul>
-                    </div>
-                    <div class="hidden sm:block w-[45%]"></div>
-                </div>
 
-                <!-- Phase 2 Content Card -->
-                <div class="relative mb-12 sm:mb-16 flex flex-col sm:flex-row items-start sm:justify-between group">
-                    <div class="absolute left-[-23px] sm:left-1/2 w-4 h-4 rounded-full bg-yellow-500 border-4 border-neutral-950 z-10 transform sm:-translate-x-1/2 sm:top-1 group-hover:scale-120 transition-transform"></div>
-                    <div class="hidden sm:block w-[45%]"></div>
-                    <div class="w-full sm:w-[45%] bg-neutral-900/60 p-6 rounded border border-white/5 relative glass-panel">
-                        <span class="font-display text-xs text-yellow-500 font-bold tracking-widest block mb-1">PHASE 02</span>
-                        <h3 class="font-display text-xl font-bold text-white mb-4">Ecosystem Expansion</h3>
-                        <ul class="space-y-2 text-sm text-gray-400 font-light">
-                            <li class="flex items-center"><span class="w-1.5 h-1.5 bg-yellow-500 rounded-full mr-2"></span>Targeted Marketing Injections</li>
-                            <li class="flex items-center"><span class="w-1.5 h-1.5 bg-yellow-500 rounded-full mr-2"></span>Strategic Holder Milestone Events</li>
-                            <li class="flex items-center"><span class="w-1.5 h-1.5 bg-yellow-500 rounded-full mr-2"></span>Major Web3 Exchange Aggregations</li>
-                        </ul>
-                    </div>
-                </div>
+<!-- HERO -->
 
-                <!-- Phase 3 Content Card -->
-                <div class="relative flex flex-col sm:flex-row items-start sm:justify-between group">
-                    <div class="absolute left-[-23px] sm:left-1/2 w-4 h-4 rounded-full bg-white border-4 border-neutral-950 z-10 transform sm:-translate-x-1/2 sm:top-1 group-hover:scale-120 transition-transform"></div>
-                    <div class="w-full sm:w-[45%] bg-neutral-900/60 p-6 rounded border border-white/5 relative glass-panel">
-                        <span class="font-display text-xs text-white font-bold tracking-widest block mb-1">PHASE 03</span>
-                        <h3 class="font-display text-xl font-bold text-white mb-4">Global Movement Power</h3>
-                        <ul class="space-y-2 text-sm text-gray-400 font-light">
-                            <li class="flex items-center"><span class="w-1.5 h-1.5 bg-white rounded-full mr-2"></span>Cross-Border Strategic Protocols</li>
-                            <li class="flex items-center"><span class="w-1.5 h-1.5 bg-white rounded-full mr-2"></span>Decentralized Application Modules</li>
-                            <li class="flex items-center"><span class="w-1.5 h-1.5 bg-white rounded-full mr-2"></span>Ecosystem Governance Expansion</li>
-                        </ul>
-                    </div>
-                    <div class="hidden sm:block w-[45%]"></div>
-                </div>
 
-            </div>
-        </div>
-    </section>
+<section class="hero" id="home">
 
-    <!-- SECTION 6: THE ARMY COMMUNITY FORUM -->
-    <section id="community" class="py-24 relative overflow-hidden border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                
-                <!-- Left Stack Content Block -->
-                <div class="lg:col-span-6 text-center lg:text-left">
-                    <span class="font-display text-xs font-bold tracking-[0.3em] text-red-500 uppercase block mb-3">THE SOVEREIGN FACTION</span>
-                    <h2 class="font-display text-3xl sm:text-5xl font-black tracking-tight mb-6">
-                        Built By The Community,<br>For The Community
-                    </h2>
-                    <p class="text-gray-400 font-light leading-relaxed mb-8 max-w-xl">
-                        Our collective power is distributed across thousands of active digital members worldwide. Join our decentralized networks to lock status ranks and contribute to global initiatives.
-                    </p>
 
-                    <!-- Realtime Statistics Vector Dashboard Tracking -->
-                    <div class="grid grid-cols-3 gap-4 max-w-md mx-auto lg:mx-0 mb-8">
-                        <div>
-                            <p class="font-display text-2xl font-bold text-white">25K+</p>
-                            <p class="text-[10px] text-gray-500 uppercase tracking-widest mt-1">X Followers</p>
-                        </div>
-                        <div>
-                            <p class="font-display text-2xl font-bold text-red-500 text-glow-red">18K+</p>
-                            <p class="text-[10px] text-gray-500 uppercase tracking-widest mt-1">Telegram Base</p>
-                        </div>
-                        <div>
-                            <p class="font-display text-2xl font-bold text-yellow-500 text-glow-gold">42K+</p>
-                            <p class="text-[10px] text-gray-500 uppercase tracking-widest mt-1">On-Chain Wallets</p>
-                        </div>
-                    </div>
+<div class="hero-background"></div>
 
-                    <a href="https://t.me" class="inline-flex items-center justify-center px-8 py-4 font-display text-xs font-bold tracking-widest text-black bg-white hover:bg-gray-200 transition-all rounded-sm uppercase">
-                        ENTER THE TELEGRAM COMMAND POST
-                    </a>
-                </div>
 
-                <!-- Right Stack: Gamified Community Ranking Interface Display -->
-                <div class="lg:col-span-6">
-                    <div class="glass-panel p-6 rounded-lg border border-white/10 relative">
-                        <h3 class="font-display text-sm text-yellow-500 font-bold tracking-wider mb-4 uppercase">Türkiye Army Rank Status</h3>
-                        <div class="space-y-3">
-                            <div class="p-3 bg-white/5 rounded border border-white/5 flex items-center justify-between">
-                                <span class="text-xs text-white font-medium">Level 3: Sovereign Legend</span>
-                                <span class="text-[10px] bg-yellow-500/10 text-yellow-400 border border-yellow-500/20 px-2 py-0.5 rounded font-mono font-bold">1,250 Wallets</span>
-                            </div>
-                            <div class="p-3 bg-white/5 rounded border border-white/5 flex items-center justify-between">
-                                <span class="text-xs text-white font-medium">Level 2: Network Warrior</span>
-                                <span class="text-[10px] bg-red-500/10 text-red-400 border border-red-500/20 px-2 py-0.5 rounded font-mono font-bold">5,890 Wallets</span>
-                            </div>
-                            <div class="p-3 bg-white/5 rounded border border-white/5 flex items-center justify-between">
-                                <span class="text-xs text-white font-medium">Level 1: Ecosystem Guardian</span>
-                                <span class="text-[10px] bg-neutral-800 text-gray-400 px-2 py-0.5 rounded font-mono font-bold">35,775 Wallets</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<div class="hero-content">
 
-            </div>
-        </div>
-    </section>
 
-    <!-- SECTION 7: STEP-BY-STEP USER HOW TO BUY ACQUISITION SYSTEM -->
-    <section id="how-to-buy" class="py-24 relative bg-black/40 border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="font-display text-xs font-bold tracking-[0.3em] text-yellow-500 uppercase block mb-3">ACQUISITION ONBOARDING MANUAL</span>
-                <h2 class="font-display text-3xl sm:text-4xl font-black tracking-tight">Ecosystem Entry Guide</h2>
-            </div>
+<h1>
+TÜRKİYE TOKEN 🇹🇷
+</h1>
 
-            <!-- 4-Step Structural Responsive Interface Layout Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                
-                <!-- Step 1 Card Component -->
-                <div class="glass-panel p-6 rounded-sm border border-white/5 relative group hover:border-red-500/30 transition-all">
-                    <span class="font-display text-3xl font-black text-neutral-800 group-hover:text-red-500/20 transition-colors block mb-4">01</span>
-                    <h3 class="font-display text-base font-bold text-white mb-2">Create Solana Wallet</h3>
-                    <p class="text-xs text-gray-400 font-light leading-relaxed">
-                        Download a premium Web3 wallet solution like Phantom or Solflare from an official application store instance.
-                    </p>
-                </div>
 
-                <!-- Step 2 Card Component -->
-                <div class="glass-panel p-6 rounded-sm border border-white/5 relative group hover:border-yellow-500/30 transition-all">
-                    <span class="font-display text-3xl font-black text-neutral-800 group-hover:text-yellow-500/20 transition-colors block mb-4">02</span>
-                    <h3 class="font-display text-base font-bold text-white mb-2">Acquire Native SOL</h3>
-                    <p class="text-xs text-gray-400 font-light leading-relaxed">
-                        Purchase native SOL liquid assets within an exchange or primary liquidity gateway, then route them directly to your personal wallet address.
-                    </p>
-                </div>
+<h2>
+United by Culture.<br>
+Powered by Blockchain.
+</h2>
 
-                <!-- Step 3 Card Component -->
-                <div class="glass-panel p-6 rounded-sm border border-white/5 relative group hover:border-red-500/30 transition-all">
-                    <span class="font-display text-3xl font-black text-neutral-800 group-hover:text-red-500/20 transition-colors block mb-4">03</span>
-                    <h3 class="font-display text-base font-bold text-white mb-2">Connect Secure Portal</h3>
-                    <p class="text-xs text-gray-400 font-light leading-relaxed">
-                        Access an optimized decentralized exchange application node like Jupiter or Raydium, linking your active Web3 wallet secure key.
-                    </p>
-                </div>
 
-                <!-- Step 4 Card Component -->
-                <div class="glass-panel p-6 rounded-sm border border-white/5 relative group hover:border-yellow-500/30 transition-all">
-                    <span class="font-display text-3xl font-black text-neutral-800 group-hover:text-yellow-500/20 transition-colors block mb-4">04</span>
-                    <h3 class="font-display text-base font-bold text-white mb-2">Execute Swap Order</h3>
-                    <p class="text-xs text-gray-400 font-light leading-relaxed">
-                        Input our official smart contract signature, specify your desired allocation balance, and finalize the secure transaction signature.
-                    </p>
-                </div>
+<p>
+A community-driven meme token bringing Turkish culture,
+global communities, and blockchain innovation together.
+</p>
 
-            </div>
-        </div>
-    </section>
 
-    <!-- PREMIUM HIGH-FIDELITY FOOTER STACK LAYOUT MODULE -->
-    <footer class="border-t border-white/5 bg-[#020202] py-12 text-sm text-gray-500">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-                
-                <!-- Left Stack Context Brand Alignment -->
-                <div class="flex items-center space-x-3">
-                    <span class="font-display text-base font-black tracking-wider text-white">TÜRKİYE <span class="text-red-500">TOKEN</span></span>
-                    <span class="text-xs text-neutral-700">|</span>
-                    <p class="text-xs font-light">From Türkiye To The World. © 2026. All Rights Reserved.</p>
-                </div>
 
-                <!-- Right Stack Technical Risk/Information Visibility Elements -->
-                <div class="flex space-x-6 text-xs font-light">
-                    <a href="#" class="hover:text-white transition-colors">Solana Explorer Node</a>
-                    <a href="#" class="hover:text-white transition-colors">Liquidity Audit Report</a>
-                    <a href="#" class="hover:text-white transition-colors">Ecosystem Terms</a>
-                </div>
+<div class="hero-buttons">
 
-            </div>
-        </div>
-    </footer>
+<a class="gold-btn">
+BUY TOKEN
+</a>
 
-    <!-- INTERACTIVE SCRIPT SYSTEM CONTROL IMPLEMENTATIONS -->
-    <script>
-        // Automatic Script Core to Smoothly Terminate Loading Layer View States
-        window.addEventListener('DOMContentLoaded', () => {
-            const loadingBar = document.getElementById('loading-bar');
-            const introOverlay = document.getElementById('intro-overlay');
-            
-            // Execute progressive visual fill adjustments over explicit clock cycles
-            setTimeout(() => {
-                if(loadingBar) loadingBar.style.transform = 'scaleX(1)';
-            }, 100);
+<a class="red-btn">
+JOIN COMMUNITY
+</a>
 
-            // Command absolute element teardown at state termination limits
-            setTimeout(() => {
-                if(introOverlay) {
-                    introOverlay.style.opacity = '0';
-                    setTimeout(() => {
-                        introOverlay.style.display = 'none';
-                    }, 1000);
-                }
-            }, 1200);
-        });
-    </script>
+<a class="outline-btn">
+EXPLORE PROJECT
+</a>
+
+</div>
+
+
+
+<div class="stats">
+
+
+<div class="stat-card">
+
+<h3>1B</h3>
+<p>Total Supply</p>
+
+</div>
+
+
+<div class="stat-card">
+
+<h3>Solana</h3>
+<p>Blockchain</p>
+
+</div>
+
+
+<div class="stat-card">
+
+<h3>∞</h3>
+<p>Community Vision</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="hero-art">
+
+
+<img src="assets/turkey-coin-3d.png" class="coin">
+
+
+<img src="assets/guardian-eagle.png" class="guardian">
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- ABOUT -->
+
+
+<section id="about" class="section">
+
+
+<h2>
+The Digital Symbol of Turkish Community Power
+</h2>
+
+
+<p class="center">
+
+TÜRKİYE Token represents unity, creativity and community strength
+in the Web3 era. Built by believers, powered by holders.
+
+</p>
+
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<h3>🌎 Global Movement</h3>
+
+<p>
+Connecting Turkish culture with worldwide blockchain communities.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>⚡ Web3 Innovation</h3>
+
+<p>
+Building a futuristic community ecosystem powered by Solana.
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h3>🦅 Guardian Spirit</h3>
+
+<p>
+A symbol of strength, freedom and unity.
+</p>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- TOKEN DASHBOARD -->
+
+
+<section class="section dashboard">
+
+
+<h2>
+Token Intelligence Dashboard
+</h2>
+
+
+
+<div class="dashboard-grid">
+
+
+<div class="card">
+
+<h4>Name</h4>
+<p>TÜRKİYE Token</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h4>Symbol</h4>
+<p>TÜRKİYE</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h4>Network</h4>
+<p>Solana</p>
+
+</div>
+
+
+
+
+<div class="card contract">
+
+<h4>Contract</h4>
+
+<p>
+5W9fU1hab4titQighG9x1m4c995379JZ2wjM4Ypdpump
+</p>
+
+<button onclick="copyCA()">
+Copy Contract
+</button>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+<!-- TOKENOMICS -->
+
+
+<section id="tokenomics" class="section">
+
+
+<h2>
+Tokenomics
+</h2>
+
+
+<div class="tokenomics">
+
+
+<div class="chart">
+
+<div class="circle">
+100%
+</div>
+
+</div>
+
+
+
+<div class="token-list">
+
+
+<div>
+<span></span>
+Liquidity
+</div>
+
+
+<div>
+<span></span>
+Community Rewards
+</div>
+
+
+<div>
+<span></span>
+Marketing
+</div>
+
+
+<div>
+<span></span>
+Development
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- ROADMAP -->
+
+
+<section id="roadmap" class="section">
+
+
+<h2>
+The Rise of TÜRKİYE Token
+</h2>
+
+
+
+<div class="timeline">
+
+
+<div class="phase">
+
+<h3>
+Phase 1 - Genesis
+</h3>
+
+<p>
+Website launch<br>
+Community formation<br>
+Social growth
+</p>
+
+</div>
+
+
+
+
+<div class="phase">
+
+<h3>
+Phase 2 - Expansion
+</h3>
+
+<p>
+Marketing campaigns<br>
+Community events<br>
+Holder growth
+</p>
+
+</div>
+
+
+
+
+
+<div class="phase">
+
+<h3>
+Phase 3 - Global Movement
+</h3>
+
+<p>
+Partnerships<br>
+International community<br>
+Web3 expansion
+</p>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- COMMUNITY -->
+
+
+<section id="community" class="section community">
+
+
+<h2>
+Built By The Community,
+For The Community
+</h2>
+
+
+
+<img src="assets/community-art.png">
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<h3>
+🛡 Guardians
+</h3>
+
+<p>
+Community supporters
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+⚔ Warriors
+</h3>
+
+<p>
+Growth contributors
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+👑 Legends
+</h3>
+
+<p>
+Early believers
+</p>
+
+</div>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- HOW TO BUY -->
+
+
+<section id="buy" class="section">
+
+
+<h2>
+How To Buy
+</h2>
+
+
+<div class="steps">
+
+
+<div>
+1<br>
+Create Solana Wallet
+</div>
+
+
+<div>
+2<br>
+Buy SOL
+</div>
+
+
+<div>
+3<br>
+Connect Wallet
+</div>
+
+
+<div>
+4<br>
+Swap TÜRKİYE Token
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- GOLDEN VAULT -->
+
+
+<section class="vault section">
+
+
+<h2>
+The Golden Vault
+</h2>
+
+
+<p>
+Every milestone becomes part of history.
+</p>
+
+
+<div class="vault-box">
+
+Genesis Members<br>
+Community Memories<br>
+Future Achievements
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- AI GUARDIAN -->
+
+
+<div class="ai">
+
+<img src="assets/guardian-eagle.png">
+
+<div>
+
+Welcome explorer 🇹🇷
+
+<br>
+
+I am Bozkor,
+your Web3 Guardian.
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+<!-- FOOTER -->
+
+
+<footer>
+
+
+<img src="assets/logo.png">
+
+
+<h3>
+From Türkiye To The World 🌎
+</h3>
+
+
+<p>
+A community born from culture,
+united by technology,
+connected through blockchain.
+</p>
+
+
+
+</footer>
+
+
+
+
+<script src="script.js"></script>
+
+
 </body>
 </html>
