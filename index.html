@@ -7,70 +7,85 @@
     <!-- Tailwind CSS ve FontAwesome İkonları -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Chart.js (Donut Grafiği İçin) -->
+    <!-- Chart.js (Donut Grafiği) -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-black text-white font-sans overflow-x-hidden relative">
 
-    <!-- Dinamik Arka Plan & Parçacıklar -->
-    <div class="fixed inset-0 -z-50 bg-radial from-[#1a0505] via-black to-black"></div>
-    <canvas id="particleCanvas" class="fixed inset-0 -z-40 pointer-events-none"></canvas>
-    <div class="flag-overlay fixed inset-0 -z-40 opacity-5 pointer-events-none"></div>
-
-    <!-- 1. Sticky Menü -->
-    <nav class="sticky top-0 z-50 backdrop-blur-md bg-black/40 border-b border-red-900/30 px-6 py-4 flex justify-between items-center transition-all duration-300">
-        <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full logo-glass border border-white/20 shadow-[0_0_15px_rgba(239,68,68,0.3)]"></div>
-            <span class="font-bold text-xl tracking-wider uppercase bg-gradient-to-r from-red-500 to-amber-500 bg-clip-text text-transparent">Türkiye Token</span>
+    <!-- 🚀 Gelişmiş Açılış Ekranı (Preloader) -->
+    <div id="preloader" class="fixed inset-0 z-[100] bg-black flex flex-col items-center justify-center transition-opacity duration-700 ease-in-out">
+        <div class="relative mb-4">
+            <div class="w-20 h-20 rounded-full border-2 border-red-600/20 border-t-red-600 animate-spin"></div>
+            <i class="fa-solid fa-moon-star absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl text-red-500 animate-pulse"></i>
         </div>
-        <div class="hidden md:flex items-center gap-8 font-medium text-sm tracking-wide">
+        <h2 class="text-2xl font-black tracking-widest bg-gradient-to-r from-red-500 via-amber-500 to-red-600 bg-clip-text text-transparent uppercase animate-pulse">TÜRKİYE TOKEN</h2>
+        <p class="text-[10px] text-neutral-500 mt-2 tracking-widest uppercase">Web3 Havuzu Yükleniyor...</p>
+    </div>
+
+    <!-- Dinamik Kozmik Arka Plan Efektleri -->
+    <div class="fixed inset-0 -z-50 bg-radial from-[#180303] via-black to-black"></div>
+    <canvas id="particleCanvas" class="fixed inset-0 -z-40 pointer-events-none"></canvas>
+    <div class="flag-overlay fixed inset-0 -z-40 opacity-[0.03] pointer-events-none"></div>
+
+    <!-- Sabit Premium Menü (Sticky Navbar) -->
+    <nav class="sticky top-0 z-50 backdrop-blur-md bg-black/40 border-b border-red-950/30 px-6 py-4 flex justify-between items-center transition-all duration-300">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full logo-glass border border-white/10 flex items-center justify-center shadow-[0_0_15px_rgba(239,68,68,0.2)]">
+                <i class="fa-solid fa-moon-star text-red-500 text-sm"></i>
+            </div>
+            <span class="font-extrabold text-lg tracking-wider bg-gradient-to-r from-red-500 via-amber-400 to-amber-600 bg-clip-text text-transparent uppercase">Türkiye Token</span>
+        </div>
+        <div class="hidden md:flex items-center gap-8 font-semibold text-[11px] tracking-wider uppercase text-neutral-300">
             <a href="#hero" class="hover:text-red-500 transition-colors">Home</a>
             <a href="#about" class="hover:text-red-500 transition-colors">About</a>
             <a href="#tokenomics" class="hover:text-red-500 transition-colors">Tokenomics</a>
             <a href="#roadmap" class="hover:text-red-500 transition-colors">Roadmap</a>
             <a href="#faq" class="hover:text-red-500 transition-colors">FAQ</a>
-            <a href="#buy" class="neon-btn px-5 py-2 rounded-full text-xs font-bold uppercase tracking-widest">Buy Now</a>
+            <a href="#buy" class="neon-btn px-6 py-2.5 rounded-full font-bold">Buy Now</a>
         </div>
     </nav>
 
-    <!-- 2. Hero Bölümü -->
-    <section id="hero" class="min-h-[90vh] flex items-center justify-center px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-12 pt-12">
+    <!-- Hero Bölümü -->
+    <section id="hero" class="min-h-[85vh] flex items-center justify-center px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-12 pt-6">
         <div class="space-y-6 reveal">
-            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-none">
+            <span class="inline-block bg-red-600/10 border border-red-500/20 text-red-500 text-[10px] px-4 py-1.5 rounded-full font-bold uppercase tracking-widest shadow-[0_0_15px_rgba(239,68,68,0.1)]">
+                🇹🇷 %100 Topluluk Hareketi
+            </span>
+            <h1 class="text-5xl md:text-7xl font-black tracking-tight leading-none uppercase">
                 Milli Memecoin <br>
-                <span class="bg-gradient-to-r from-red-500 via-amber-500 to-red-600 bg-clip-text text-transparent">Türkiye Token</span>
+                <span class="bg-gradient-to-r from-red-500 via-amber-400 to-red-600 bg-clip-text text-transparent">Türkiye Token</span>
             </h1>
-            <p class="text-gray-400 text-lg max-w-md">Solana ağının en güçlü, tamamen topluluk odaklı ve ay-yıldız ruhunu taşıyan yeni nesil memecoini.</p>
+            <p class="text-neutral-400 text-sm md:text-base max-w-md leading-relaxed">Solana ağının hızını, ay-yıldızın asaletini ve topluluğun sarsılmaz gücünü tek bir çatıda birleştiren adil Web3 projesi.</p>
             
-            <!-- Sözleşme Adresi (Tek Tıkla Kopyalama) -->
-            <div class="glass-card p-3 rounded-xl flex items-center justify-between border border-white/10 max-w-md gap-4">
-                <div class="flex items-center gap-2 overflow-hidden">
-                    <i class="fa-solid fa-key text-amber-500"></i>
-                    <span id="caText" class="text-xs font-mono text-gray-400 truncate">Pump.fun üzerinde yayında...</span>
+            <!-- Canlı Sözleşme Adresi Kopyalama Paneli -->
+            <div class="glass-card p-3 rounded-xl flex items-center justify-between border border-white/5 max-w-md gap-4 shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)]">
+                <div class="flex items-center gap-2 overflow-hidden w-full">
+                    <i class="fa-solid fa-key text-amber-500 text-xs shrink-0"></i>
+                    <span id="caText" class="text-xs font-mono text-neutral-400 truncate tracking-wide">5W9fU1hab4titQighG9x1m4c995379JZ2wjM4Ypdpump</span>
                 </div>
-                <button onclick="copyCA()" class="bg-white/10 hover:bg-red-600/20 px-4 py-2 rounded-lg text-xs font-bold transition-all flex items-center gap-2 shrink-0 border border-white/10">
-                    <i class="fa-regular fa-copy"></i> Copy
+                <button onclick="copyCA()" id="copyBtn" class="bg-white/5 hover:bg-red-600/20 px-4 py-2 rounded-lg text-xs font-bold transition-all flex items-center gap-2 shrink-0 border border-white/10 active:scale-95">
+                    <i class="fa-regular fa-copy"></i> Kopyala
                 </button>
             </div>
 
-            <div class="flex items-center gap-4 pt-4">
-                <a href="#buy" class="neon-btn px-8 py-4 rounded-xl font-bold tracking-wide uppercase text-sm">Buy Now</a>
-                <a href="https://t.me/" target="_blank" class="bg-neutral-900 border border-white/10 hover:border-red-500/50 px-8 py-4 rounded-xl font-bold tracking-wide uppercase text-sm transition-all flex items-center gap-2">
-                    <i class="fa-brands fa-telegram text-lg"></i> Join Telegram
+            <!-- Eylemler & Hızlı Sosyal Medya Linkleri -->
+            <div class="flex flex-wrap items-center gap-4 pt-2">
+                <a href="#buy" class="neon-btn px-8 py-4 rounded-xl font-bold tracking-wider uppercase text-xs">Buy Now</a>
+                <a href="https://t.me/" target="_blank" class="bg-neutral-900/60 border border-white/5 hover:border-red-500/20 px-8 py-4 rounded-xl font-bold tracking-wider uppercase text-xs transition-all flex items-center gap-2">
+                    <i class="fa-brands fa-telegram text-base text-[#24A1DE]"></i> Telegram
                 </a>
             </div>
         </div>
         
-        <!-- Sağ Taraf: Büyük Cam Logo ve 3D Dönen Token Efekti -->
-        <div class="flex justify-center items-center relative min-h-[400px]">
-            <div class="absolute w-72 h-72 bg-red-600/10 rounded-full filter blur-3xl animate-pulse"></div>
+        <!-- Sağ Taraf: CSS Tabanlı 3D Dönen Cam Token -->
+        <div class="flex justify-center items-center relative min-h-[350px]">
+            <div class="absolute w-72 h-72 bg-red-600/5 rounded-full filter blur-3xl animate-pulse"></div>
             <div class="coin-container">
                 <div class="coin-3d logo-glass">
-                    <!-- Ön Yüz (Cam Logo Efekti) -->
                     <div class="coin-face front flex items-center justify-center">
-                        <div class="w-48 h-48 rounded-full border-2 border-white/20 flex items-center justify-center shadow-[inset_0_0_30px_rgba(255,255,255,0.2)]">
-                            <i class="fa-solid fa-moon-star text-5xl text-red-500 filter drop-shadow-[0_0_15px_rgba(239,68,68,0.7)]"></i>
+                        <div class="w-48 h-48 rounded-full border border-white/10 flex items-center justify-center shadow-[inset_0_0_40px_rgba(255,255,255,0.03)] bg-black/30">
+                            <i class="fa-solid fa-moon-star text-6xl text-red-500 filter drop-shadow-[0_0_20px_rgba(239,68,68,0.5)]"></i>
                         </div>
                     </div>
                 </div>
@@ -78,220 +93,185 @@
         </div>
     </section>
 
-    <!-- 3. Canlı İstatistikler (Live Stats) -->
-    <section class="py-20 px-6 max-w-7xl mx-auto">
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            <div class="glass-card p-6 rounded-2xl border border-white/5 text-center hover-up">
-                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider mb-1">Price</p>
-                <h3 class="text-xl font-black text-white">$0.00000</h3>
+    <!-- 📊 Canlı İstatistikler Paneli -->
+    <section class="py-16 px-6 max-w-7xl mx-auto">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-6">
+            <div class="glass-card p-5 rounded-2xl border border-white/5 text-center hover-up">
+                <p class="text-[10px] text-neutral-500 font-bold uppercase tracking-widest mb-1">Fiyat (USD)</p>
+                <h3 id="stat-price" class="text-base font-black text-white">$0.00000</h3>
             </div>
-            <div class="glass-card p-6 rounded-2xl border border-white/5 text-center hover-up">
-                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider mb-1">Holders</p>
-                <h3 class="text-xl font-black text-white">1,250+</h3>
+            <div class="glass-card p-5 rounded-2xl border border-white/5 text-center hover-up">
+                <p class="text-[10px] text-neutral-500 font-bold uppercase tracking-widest mb-1">Holders</p>
+                <h3 id="stat-holders" class="text-base font-black text-white">Tarıyor...</h3>
             </div>
-            <div class="glass-card p-6 rounded-2xl border border-white/5 text-center hover-up">
-                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider mb-1">Market Cap</p>
-                <h3 class="text-xl font-black text-amber-500">$---,---</h3>
+            <div class="glass-card p-5 rounded-2xl border border-white/5 text-center hover-up">
+                <p class="text-[10px] text-neutral-500 font-bold uppercase tracking-widest mb-1">Market Cap</p>
+                <h3 id="stat-mcap" class="text-base font-black text-amber-500">Hesaplanıyor...</h3>
             </div>
-            <div class="glass-card p-6 rounded-2xl border border-white/5 text-center hover-up">
-                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider mb-1">Liquidity</p>
-                <h3 class="text-xl font-black text-white">$--,---</h3>
+            <div class="glass-card p-5 rounded-2xl border border-white/5 text-center hover-up">
+                <p class="text-[10px] text-neutral-500 font-bold uppercase tracking-widest mb-1">Likidite</p>
+                <h3 id="stat-liq" class="text-base font-black text-white">Okunuyor...</h3>
             </div>
-            <div class="glass-card p-6 rounded-2xl border border-white/5 text-center hover-up">
-                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider mb-1">Volume</p>
-                <h3 class="text-xl font-black text-white">$--,---</h3>
+            <div class="glass-card p-5 rounded-2xl border border-white/5 text-center hover-up">
+                <p class="text-[10px] text-neutral-500 font-bold uppercase tracking-widest mb-1">24H Hacim</p>
+                <h3 id="stat-vol" class="text-base font-black text-white">Veri alınıyor...</h3>
             </div>
-            <div class="glass-card p-6 rounded-2xl border border-white/5 text-center hover-up">
-                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider mb-1">24H Change</p>
-                <h3 class="text-xl font-black text-green-500">+0.00%</h3>
+            <div class="glass-card p-5 rounded-2xl border border-white/5 text-center hover-up">
+                <p class="text-[10px] text-neutral-500 font-bold uppercase tracking-widest mb-1">24H Değişim</p>
+                <h3 id="stat-change" class="text-base font-black text-neutral-400">0.00%</h3>
             </div>
+        </div>
+
+        <!-- 🔗 Profesyonel Analiz Linkleri (Yaratıcı Ekleme) -->
+        <div class="flex flex-wrap items-center justify-center gap-3 text-xs text-neutral-400">
+            <a id="lnk-dex" href="#" target="_blank" class="bg-neutral-900/40 border border-white/5 px-4 py-2 rounded-xl hover:border-amber-500/30 hover:text-white transition-all flex items-center gap-1.5"><i class="fa-solid fa-chart-line text-amber-500"></i> DexScreener</a>
+            <a id="lnk-pump" href="#" target="_blank" class="bg-neutral-900/40 border border-white/5 px-4 py-2 rounded-xl hover:border-red-500/30 hover:text-white transition-all flex items-center gap-1.5"><i class="fa-solid fa-fire text-red-500"></i> Pump.fun</a>
+            <a id="lnk-scan" href="#" target="_blank" class="bg-neutral-900/40 border border-white/5 px-4 py-2 rounded-xl hover:border-white/20 hover:text-white transition-all flex items-center gap-1.5"><i class="fa-solid fa-magnifying-glass"></i> Solscan</a>
         </div>
     </section>
 
-    <!-- 4. Neden Türkiye Token? (Özellikler) -->
+    <!-- Özellikler Modülü -->
     <section id="about" class="py-20 px-6 max-w-7xl mx-auto reveal">
         <div class="text-center max-w-2xl mx-auto mb-16">
-            <h2 class="text-3xl md:text-5xl font-black mb-4 uppercase">Neden Türkiye Token?</h2>
-            <div class="w-24 h-1 bg-gradient-to-r from-red-500 to-amber-500 mx-auto rounded-full"></div>
+            <h2 class="text-3xl md:text-4xl font-black mb-3 uppercase tracking-wider">Neden Türkiye Token?</h2>
+            <div class="w-16 h-1 bg-gradient-to-r from-red-500 to-amber-500 mx-auto rounded-full"></div>
         </div>
         <div class="grid md:grid-cols-3 gap-6">
             <div class="glass-card p-8 rounded-2xl border border-white/5 hover-up relative overflow-hidden group">
-                <div class="absolute -right-4 -bottom-4 text-white/5 text-9xl font-black group-hover:text-red-500/10 transition-colors"><i class="fa-solid fa-users"></i></div>
-                <div class="w-12 h-12 rounded-xl bg-red-600/20 border border-red-500/30 flex items-center justify-center text-red-500 text-xl mb-6"><i class="fa-solid fa-users"></i></div>
-                <h4 class="text-xl font-bold mb-2">Community Driven</h4>
-                <p class="text-gray-400 text-sm">Yönetim tamamen topluluktadır. Balinaların değil, topluluğun gücü konuşur.</p>
+                <div class="w-12 h-12 rounded-xl bg-red-600/10 border border-red-500/20 flex items-center justify-center text-red-500 text-lg mb-6"><i class="fa-solid fa-users"></i></div>
+                <h4 class="text-base font-bold mb-2 uppercase tracking-wide">Community Driven</h4>
+                <p class="text-neutral-400 text-xs leading-relaxed">Güç tamamen topluluğun elindedir. Geliştirici veya balina baskısı olmadan adil büyüme hedeflenir.</p>
             </div>
             <div class="glass-card p-8 rounded-2xl border border-white/5 hover-up relative overflow-hidden group">
-                <div class="absolute -right-4 -bottom-4 text-white/5 text-9xl font-black group-hover:text-amber-500/10 transition-colors"><i class="fa-solid fa-rocket"></i></div>
-                <div class="w-12 h-12 rounded-xl bg-amber-600/20 border border-amber-500/30 flex items-center justify-center text-amber-500 text-xl mb-6"><i class="fa-solid fa-rocket"></i></div>
-                <h4 class="text-xl font-bold mb-2">Fair Launch</h4>
-                <p class="text-gray-400 text-sm">Ön satış yok, içeriden alım yok. Pump.fun üzerinde herkesle aynı anda adil başlangıç.</p>
+                <div class="w-12 h-12 rounded-xl bg-amber-600/10 border border-amber-500/20 flex items-center justify-center text-amber-500 text-lg mb-6"><i class="fa-solid fa-rocket"></i></div>
+                <h4 class="text-base font-bold mb-2 uppercase tracking-wide">Fair Launch</h4>
+                <p class="text-neutral-400 text-xs leading-relaxed">Ön satış veya gizli tahsisat barındırmaz. Pump.fun mekaniğiyle herkesle aynı anda temiz başlangıç.</p>
             </div>
             <div class="glass-card p-8 rounded-2xl border border-white/5 hover-up relative overflow-hidden group">
-                <div class="absolute -right-4 -bottom-4 text-white/5 text-9xl font-black group-hover:text-red-500/10 transition-colors"><i class="fa-solid fa-percent"></i></div>
-                <div class="w-12 h-12 rounded-xl bg-red-600/20 border border-red-500/30 flex items-center justify-center text-red-500 text-xl mb-6"><i class="fa-solid fa-percent"></i></div>
-                <h4 class="text-xl font-bold mb-2">Zero Tax</h4>
-                <p class="text-gray-400 text-sm">Alırken veya satarken hiçbir gizli vergi veya komisyon yok. %0 Vergi rahatlığı.</p>
-            </div>
-            <div class="glass-card p-8 rounded-2xl border border-white/5 hover-up relative overflow-hidden group">
-                <div class="absolute -right-4 -bottom-4 text-white/5 text-9xl font-black group-hover:text-amber-500/10 transition-colors"><i class="fa-solid fa-bolt"></i></div>
-                <div class="w-12 h-12 rounded-xl bg-amber-600/20 border border-amber-500/30 flex items-center justify-center text-amber-500 text-xl mb-6"><i class="fa-solid fa-bolt"></i></div>
-                <h4 class="text-xl font-bold mb-2">Solana Powered</h4>
-                <p class="text-gray-400 text-sm">Solana ağının getirdiği ultra düşük işlem ücretleri ve ışık hızında transfer yapısı.</p>
-            </div>
-            <div class="glass-card p-8 rounded-2xl border border-white/5 hover-up relative overflow-hidden group">
-                <div class="absolute -right-4 -bottom-4 text-white/5 text-9xl font-black group-hover:text-red-500/10 transition-colors"><i class="fa-solid fa-gauge-high"></i></div>
-                <div class="w-12 h-12 rounded-xl bg-red-600/20 border border-red-500/30 flex items-center justify-center text-red-500 text-xl mb-6"><i class="fa-solid fa-gauge-high"></i></div>
-                <h4 class="text-xl font-bold mb-2">Fast Transactions</h4>
-                <p class="text-gray-400 text-sm">Ağda bekleme sürelerine son. Milisaniyeler içinde işlemleriniz onaylanır.</p>
-            </div>
-            <div class="glass-card p-8 rounded-2xl border border-white/5 hover-up relative overflow-hidden group">
-                <div class="absolute -right-4 -bottom-4 text-white/5 text-9xl font-black group-hover:text-amber-500/10 transition-colors"><i class="fa-solid fa-shield-heart"></i></div>
-                <div class="w-12 h-12 rounded-xl bg-amber-600/20 border border-amber-500/30 flex items-center justify-center text-amber-500 text-xl mb-6"><i class="fa-solid fa-shield-heart"></i></div>
-                <h4 class="text-xl font-bold mb-2">Strong Community</h4>
-                <p class="text-gray-400 text-sm">Arkasında kenetlenmiş, organize hareket eden güçlü bir yerli ve yabancı yatırımcı kitlesi.</p>
+                <div class="w-12 h-12 rounded-xl bg-red-600/10 border border-red-500/20 flex items-center justify-center text-red-500 text-lg mb-6"><i class="fa-solid fa-percent"></i></div>
+                <h4 class="text-base font-bold mb-2 uppercase tracking-wide">Zero Tax</h4>
+                <p class="text-neutral-400 text-xs leading-relaxed">Ekosistem işlemlerinde sıfır vergi politikası. Alırken ve satırken cüzdanınızdan ekstra kesintiler yapılmaz.</p>
             </div>
         </div>
     </section>
 
-    <!-- 5. Nasıl Alınır? (How to Buy) -->
+    <!-- Nasıl Alınır? -->
     <section id="buy" class="py-20 px-6 max-w-7xl mx-auto reveal">
         <div class="text-center max-w-2xl mx-auto mb-16">
-            <h2 class="text-3xl md:text-5xl font-black mb-4 uppercase">Nasıl Satın Alınır?</h2>
-            <div class="w-24 h-1 bg-gradient-to-r from-red-500 to-amber-500 mx-auto rounded-full"></div>
+            <h2 class="text-3xl md:text-4xl font-black mb-3 uppercase tracking-wider">Nasıl Satın Alınır?</h2>
+            <div class="w-16 h-1 bg-gradient-to-r from-red-500 to-amber-500 mx-auto rounded-full"></div>
         </div>
-        <div class="grid md:grid-cols-4 gap-6 relative">
-            <div class="glass-card p-6 rounded-2xl border border-white/5 relative step-card">
-                <div class="text-4xl font-black text-red-500/30 mb-4">01</div>
-                <h5 class="text-lg font-bold mb-2">Phantom Cüzdan İndir</h5>
-                <p class="text-gray-400 text-sm">App Store veya Google Play'den Phantom cüzdanını mobil cihazına veya tarayıcına kur.</p>
+        <div class="grid md:grid-cols-4 gap-6">
+            <div class="glass-card p-6 rounded-2xl border border-white/5">
+                <div class="text-3xl font-black text-red-500/20 mb-3">01</div>
+                <h5 class="font-bold mb-2 uppercase text-xs">Phantom Kur</h5>
+                <p class="text-neutral-400 text-xs leading-relaxed">Phantom cüzdan uygulamasını mobil cihazına indir veya tarayıcına eklenti olarak kur.</p>
             </div>
-            <div class="glass-card p-6 rounded-2xl border border-white/5 relative step-card">
-                <div class="text-4xl font-black text-amber-500/30 mb-4">02</div>
-                <h5 class="text-lg font-bold mb-2">SOL Yükle</h5>
-                <p class="text-gray-400 text-sm">Herhangi bir merkezi borsadan (Binance, vb.) cüzdan adresine Solana (SOL) transfer et.</p>
+            <div class="glass-card p-6 rounded-2xl border border-white/5">
+                <div class="text-3xl font-black text-amber-500/20 mb-3">02</div>
+                <h5 class="font-bold mb-2 uppercase text-xs">SOL Aktar</h5>
+                <p class="text-neutral-400 text-xs leading-relaxed">Herhangi bir güvenilir borsadan cüzdanının benzersiz Solana adresine SOL transfer et.</p>
             </div>
-            <div class="glass-card p-6 rounded-2xl border border-white/5 relative step-card">
-                <div class="text-4xl font-black text-red-500/30 mb-4">03</div>
-                <h5 class="text-lg font-bold mb-2">Pump.fun Bağlan</h5>
-                <p class="text-gray-400 text-sm">Cüzdan içi tarayıcıdan veya bilgisayardan Pump.fun platformuna girip cüzdanını bağla.</p>
+            <div class="glass-card p-6 rounded-2xl border border-white/5">
+                <div class="text-3xl font-black text-red-500/20 mb-3">03</div>
+                <h5 class="font-bold mb-2 uppercase text-xs">Havuzu Aç</h5>
+                <p class="text-neutral-400 text-xs leading-relaxed">Pump.fun platformuna cüzdanını bağla ve arama çubuğuna kontrat adresimizi yapıştır.</p>
             </div>
-            <div class="glass-card p-6 rounded-2xl border border-white/5 relative step-card">
-                <div class="text-4xl font-black text-amber-500/30 mb-4">04</div>
-                <h5 class="text-lg font-bold mb-2">Türkiye Token Al</h5>
-                <p class="text-gray-400 text-sm">Arama çubuğuna kontrat adresini yapıştır, takas etmek istediğin SOL miktarını gir ve onayla.</p>
+            <div class="glass-card p-6 rounded-2xl border border-white/5">
+                <div class="text-3xl font-black text-amber-500/20 mb-3">04</div>
+                <h5 class="font-bold mb-2 uppercase text-xs">Swap Et</h5>
+                <p class="text-neutral-400 text-xs leading-relaxed">Almak istediğin miktarda Solana miktarını girip onay ver. İşlem saniyeler içinde tamamlanır.</p>
             </div>
         </div>
     </section>
 
-    <!-- 6. Tokenomics (Donut/Pie Chart Entegre Alanı) -->
+    <!-- Tokenomics -->
     <section id="tokenomics" class="py-20 px-6 max-w-7xl mx-auto reveal">
         <div class="text-center max-w-2xl mx-auto mb-16">
-            <h2 class="text-3xl md:text-5xl font-black mb-4 uppercase">Tokenomics</h2>
-            <div class="w-24 h-1 bg-gradient-to-r from-red-500 to-amber-500 mx-auto rounded-full"></div>
+            <h2 class="text-3xl md:text-4xl font-black mb-3 uppercase tracking-wider">Tokenomics</h2>
+            <div class="w-16 h-1 bg-gradient-to-r from-red-500 to-amber-500 mx-auto rounded-full"></div>
         </div>
-        <div class="grid md:grid-cols-2 gap-12 items-center max-w-4xl mx-auto">
-            <div class="relative flex justify-center max-w-[320px] mx-auto w-full">
+        <div class="grid md:grid-cols-2 gap-12 items-center max-w-3xl mx-auto">
+            <div class="relative flex justify-center max-w-[240px] mx-auto w-full">
                 <canvas id="tokenomicsChart"></canvas>
             </div>
-            <div class="space-y-4">
-                <div class="glass-card p-4 rounded-xl border border-white/5 flex justify-between items-center">
-                    <span class="flex items-center gap-3"><span class="w-4 h-4 rounded bg-red-600 block"></span> Raydium Liquidity</span>
-                    <span class="font-bold">80%</span>
+            <div class="space-y-3">
+                <div class="glass-card p-4 rounded-xl border border-white/5 flex justify-between items-center text-xs">
+                    <span class="flex items-center gap-3"><span class="w-3 h-3 rounded bg-red-600 block"></span> Raydium Havuzu</span>
+                    <span class="font-bold text-neutral-300">%80</span>
                 </div>
-                <div class="glass-card p-4 rounded-xl border border-white/5 flex justify-between items-center">
-                    <span class="flex items-center gap-3"><span class="w-4 h-4 rounded bg-amber-500 block"></span> Marketing & CEX</span>
-                    <span class="font-bold">10%</span>
+                <div class="glass-card p-4 rounded-xl border border-white/5 flex justify-between items-center text-xs">
+                    <span class="flex items-center gap-3"><span class="w-3 h-3 rounded bg-amber-500 block"></span> Marketing & CEX</span>
+                    <span class="font-bold text-neutral-300">%10</span>
                 </div>
-                <div class="glass-card p-4 rounded-xl border border-white/5 flex justify-between items-center">
-                    <span class="flex items-center gap-3"><span class="w-4 h-4 rounded bg-neutral-700 block"></span> Community Airdrops</span>
-                    <span class="font-bold">10%</span>
+                <div class="glass-card p-4 rounded-xl border border-white/5 flex justify-between items-center text-xs">
+                    <span class="flex items-center gap-3"><span class="w-3 h-3 rounded bg-neutral-700 block"></span> Topluluk Havuzu</span>
+                    <span class="font-bold text-neutral-300">%10</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 7. Roadmap (Animasyonlu Çizgi Timeline) -->
+    <!-- Yol Haritası (Timeline) -->
     <section id="roadmap" class="py-20 px-6 max-w-7xl mx-auto reveal">
         <div class="text-center max-w-2xl mx-auto mb-16">
-            <h2 class="text-3xl md:text-5xl font-black mb-4 uppercase">Roadmap</h2>
-            <div class="w-24 h-1 bg-gradient-to-r from-red-500 to-amber-500 mx-auto rounded-full"></div>
+            <h2 class="text-3xl md:text-4xl font-black mb-3 uppercase tracking-wider">Yol Haritası</h2>
+            <div class="w-16 h-1 bg-gradient-to-r from-red-500 to-amber-500 mx-auto rounded-full"></div>
         </div>
-        <div class="relative border-l-2 border-red-600/30 max-w-3xl mx-auto pl-8 space-y-12">
+        <div class="relative border-l border-red-600/20 max-w-xl mx-auto pl-8 space-y-10">
             <div class="relative">
-                <div class="absolute -left-[41px] top-1 w-5 h-5 rounded-full bg-red-600 shadow-[0_0_10px_rgba(220,38,38,0.8)] border-4 border-black"></div>
-                <h4 class="text-xl font-bold text-amber-500 mb-2">Phase 1: Doğuş</h4>
-                <p class="text-gray-400 text-sm">Token lansmanı (Pump.fun), Sosyal medya kanallarının kurulumu, İlk topluluk büyüme dalgası.</p>
+                <div class="absolute -left-[37px] top-1 w-4 h-4 rounded-full bg-red-600 border-4 border-black"></div>
+                <h4 class="font-bold text-amber-500 text-sm uppercase tracking-wide">Faz 1: Temeller</h4>
+                <p class="text-neutral-400 text-xs mt-1">Pump.fun üzerinde token lansmanı, sosyal medya kanallarının operasyona başlaması ve organik kitle kazanımı.</p>
             </div>
             <div class="relative">
-                <div class="absolute -left-[41px] top-1 w-5 h-5 rounded-full bg-amber-500 shadow-[0_0_10px_rgba(245,158,11,0.8)] border-4 border-black"></div>
-                <h4 class="text-xl font-bold text-white mb-2">Phase 2: Güçlenme</h4>
-                <p class="text-gray-400 text-sm">Raydium likidite havuzunun kilitlenmesi, CoinGecko ve CoinMarketCap başvuruları, Yerel meme akımlarının başlatılması.</p>
+                <div class="absolute -left-[37px] top-1 w-4 h-4 rounded-full bg-amber-500 border-4 border-black"></div>
+                <h4 class="font-bold text-white text-sm uppercase tracking-wide">Faz 2: Dağıtım</h4>
+                <p class="text-neutral-400 text-xs mt-1">Havuzun Raydium borsasına taşınması, kilitlerin yakılması ve küresel takip sitelerinde (CMC/CG) yer alma.</p>
             </div>
             <div class="relative">
-                <div class="absolute -left-[41px] top-1 w-5 h-5 rounded-full bg-neutral-700 border-4 border-black"></div>
-                <h4 class="text-xl font-bold text-gray-500 mb-2">Phase 3: Fetih</h4>
-                <p class="text-gray-400 text-sm">Merkezi Borsa (CEX) listelemeleri, Büyük global Kols işbirlikleri, Sürpriz ekosistem entegrasyonları.</p>
+                <div class="absolute -left-[37px] top-1 w-4 h-4 rounded-full bg-neutral-700 border-4 border-black"></div>
+                <h4 class="font-bold text-neutral-500 text-sm uppercase tracking-wide">Faz 3: Genişleme</h4>
+                <p class="text-neutral-400 text-xs mt-1">Stratejik Kols ortaklıkları, Merkezi Borsa (CEX) başvuruları ve Web3 entegrasyonları.</p>
             </div>
         </div>
     </section>
 
-    <!-- 8. Galeri (Meme Görselleri) -->
-    <section class="py-20 px-6 max-w-7xl mx-auto reveal">
-        <div class="text-center max-w-2xl mx-auto mb-16">
-            <h2 class="text-3xl md:text-5xl font-black mb-4 uppercase">Meme Galerisi</h2>
-            <div class="w-24 h-1 bg-gradient-to-r from-red-500 to-amber-500 mx-auto rounded-full"></div>
-        </div>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div class="glass-card overflow-hidden rounded-2xl aspect-square border border-white/5 bg-neutral-900 flex items-center justify-center text-gray-700">Meme Asset 1</div>
-            <div class="glass-card overflow-hidden rounded-2xl aspect-square border border-white/5 bg-neutral-900 flex items-center justify-center text-gray-700">Meme Asset 2</div>
-            <div class="glass-card overflow-hidden rounded-2xl aspect-square border border-white/5 bg-neutral-900 flex items-center justify-center text-gray-700">Meme Asset 3</div>
-            <div class="glass-card overflow-hidden rounded-2xl aspect-square border border-white/5 bg-neutral-900 flex items-center justify-center text-gray-700">Meme Asset 4</div>
-        </div>
-    </section>
-
-    <!-- 9. FAQ (Sıkça Sorulan Sorular) -->
-    <section id="faq" class="py-20 px-6 max-w-3xl mx-auto reveal">
+    <!-- Sıkça Sorulanlar -->
+    <section id="faq" class="py-20 px-6 max-w-2xl mx-auto reveal">
         <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-5xl font-black mb-4 uppercase">Sıkça Sorulanlar</h2>
-            <div class="w-24 h-1 bg-gradient-to-r from-red-500 to-amber-500 mx-auto rounded-full"></div>
+            <h2 class="text-3xl md:text-4xl font-black mb-3 uppercase tracking-wider">Sıkça Sorulanlar</h2>
+            <div class="w-16 h-1 bg-gradient-to-r from-red-500 to-amber-500 mx-auto rounded-full"></div>
         </div>
-        <div class="space-y-4">
-            <div class="glass-card rounded-2xl border border-white/5 overflow-hidden">
-                <button class="w-full p-6 text-left font-bold flex justify-between items-center hover:bg-white/5" onclick="toggleFaq(this)">
-                    <span>What is Türkiye Token?</span>
-                    <i class="fa-solid fa-chevron-down text-sm transition-transform"></i>
+        <div class="space-y-3">
+            <div class="glass-card rounded-xl border border-white/5 overflow-hidden text-xs">
+                <button class="w-full p-5 text-left font-bold flex justify-between items-center hover:bg-white/5" onclick="toggleFaq(this)">
+                    <span>Türkiye Token Hangi Ağda?</span>
+                    <i class="fa-solid fa-chevron-down text-[10px] transition-transform"></i>
                 </button>
-                <div class="p-6 pt-0 text-gray-400 text-sm hidden">Türkiye Token, Solana blok zinciri üzerinde adil lansman ilkesiyle üretilmiş, Türk kültür öğelerini Web3 dünyasına taşıyan eğlence ve topluluk odaklı bir memecoindir.</div>
+                <div class="p-5 pt-0 text-neutral-400 leading-relaxed hidden">Projemiz tamamen Solana blok zinciri üzerinde kurulmuştur. Bu sayede milisaniyeler düzeyinde hız ve sıfıra yakın gas ücreti avantajı sunar.</div>
             </div>
-            <div class="glass-card rounded-2xl border border-white/5 overflow-hidden">
-                <button class="w-full p-6 text-left font-bold flex justify-between items-center hover:bg-white/5" onclick="toggleFaq(this)">
-                    <span>Is liquidity locked?</span>
-                    <i class="fa-solid fa-chevron-down text-sm transition-transform"></i>
+            <div class="glass-card rounded-xl border border-white/5 overflow-hidden text-xs">
+                <button class="w-full p-5 text-left font-bold flex justify-between items-center hover:bg-white/5" onclick="toggleFaq(this)">
+                    <span>Likidite Güvende mi?</span>
+                    <i class="fa-solid fa-chevron-down text-[10px] transition-transform"></i>
                 </button>
-                <div class="p-6 pt-0 text-gray-400 text-sm hidden">Evet, Pump.fun eğrisi tamamlandığında likidite otomatik olarak Raydium'a aktarılır ve kalıcı olarak yakılır/kilitlenir. Güvenlik en üst seviyededir.</div>
-            </div>
-            <div class="glass-card rounded-2xl border border-white/5 overflow-hidden">
-                <button class="w-full p-6 text-left font-bold flex justify-between items-center hover:bg-white/5" onclick="toggleFaq(this)">
-                    <span>Where can I buy?</span>
-                    <i class="fa-solid fa-chevron-down text-sm transition-transform"></i>
-                </button>
-                <div class="p-6 pt-0 text-gray-400 text-sm hidden">İlk aşamada doğrudan resmi Pump.fun linki üzerinden cüzdanınızı bağlayarak SOL karşılığında güvenle satın alabilirsiniz.</div>
+                <div class="p-5 pt-0 text-neutral-400 leading-relaxed hidden">Kesinlikle. Pump.fun platform kuralları gereği akıllı sözleşme doğrultusunda havuz dolumu bittiğinde likidite otomatik olarak kilitlenir.</div>
             </div>
         </div>
     </section>
 
-    <!-- 10. Topluluk Kartları & Footer -->
-    <footer class="py-12 border-t border-white/5 px-6 max-w-7xl mx-auto text-center space-y-8">
-        <div class="grid md:grid-cols-2 gap-4 max-w-xl mx-auto">
-            <a href="https://x.com" target="_blank" class="glass-card p-6 rounded-2xl border border-white/5 flex items-center justify-center gap-3 font-bold hover:border-red-500/40 transition-all group">
-                <i class="fa-brands fa-x-twitter text-2xl group-hover:scale-110 transition-transform"></i> Follow on X
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/5 px-6 text-center space-y-6">
+        <div class="flex justify-center gap-4 max-w-sm mx-auto text-xs">
+            <a href="https://x.com" target="_blank" class="glass-card px-6 py-3 rounded-xl border border-white/5 flex items-center gap-2 font-bold hover:border-red-500/30 transition-all">
+                <i class="fa-brands fa-x-twitter"></i> Twitter
             </a>
-            <a href="https://t.me" target="_blank" class="glass-card p-6 rounded-2xl border border-white/5 flex items-center justify-center gap-3 font-bold hover:border-red-500/40 transition-all group">
-                <i class="fa-brands fa-telegram text-2xl group-hover:scale-110 transition-transform"></i> Telegram Group
+            <a href="https://t.me" target="_blank" class="glass-card px-6 py-3 rounded-xl border border-white/5 flex items-center gap-2 font-bold hover:border-red-500/30 transition-all">
+                <i class="fa-brands fa-telegram text-[#24A1DE]"></i> Telegram
             </a>
         </div>
-        <p class="text-xs text-gray-600">&copy; 2026 Türkiye Token. Built for the culture.</p>
+        <p class="text-[10px] text-neutral-600">&copy; 2026 Türkiye Token. Tüm hakları topluluğa aittir.</p>
     </footer>
 
     <script src="script.js"></script>
