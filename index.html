@@ -1,56 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TÜRKİYE Token | The Community of Türkiye</title>
 
-<meta name="description" content="TÜRKİYE Token is a premium community-driven token representing the spirit, strength and future of Türkiye.">
-<meta name="theme-color" content="#0b0f18">
+<title>TÜRKİYE Token | Premium Solana Community</title>
+
+<meta name="description" content="The Official TÜRKİYE Token Website">
+
+<meta name="theme-color" content="#870000">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+/>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<div id="particles"></div>
+<!--================ PRELOADER ================-->
+
+<div id="preloader">
+
+<div class="loader-ring"></div>
+
+<div class="loader-ring second"></div>
+
+<div class="loader-logo">
+
+<img src="images/logo.png" alt="Türkiye Token">
+
+</div>
+
+</div>
+
+<!--================ PARTICLES ================-->
+
+<canvas id="bgCanvas"></canvas>
+
+<div class="noise"></div>
+
+<div class="gradient-blur gradient-1"></div>
+<div class="gradient-blur gradient-2"></div>
+<div class="gradient-blur gradient-3"></div>
+
+<!--================ HEADER ================-->
 
 <header class="header">
 
 <div class="container">
 
-<a href="#" class="logo">
+<a class="logo" href="#">
 
 <img src="images/logo.png" alt="Türkiye Token">
 
-<span>TÜRKİYE TOKEN</span>
+<div>
+
+<h2>TÜRKİYE</h2>
+
+<span>COMMUNITY TOKEN</span>
+
+</div>
 
 </a>
 
 <nav class="navbar">
 
 <a href="#home">Home</a>
+
 <a href="#about">About</a>
+
 <a href="#features">Features</a>
+
 <a href="#tokenomics">Tokenomics</a>
+
 <a href="#roadmap">Roadmap</a>
-<a href="#community">Community</a>
+
 <a href="#faq">FAQ</a>
+
+<a href="#community">Community</a>
 
 </nav>
 
-<div class="header-buttons">
+<div class="header-right">
 
-<a href="#" class="btn-outline">Chart</a>
+<a href="#" class="header-chart">
 
-<a href="#" class="btn-primary">Buy Now</a>
+Chart
 
-</div>
+</a>
+
+<a href="#" class="buy-btn">
+
+Buy Now
+
+<i class="fa-solid fa-arrow-right"></i>
+
+</a>
 
 <div class="menu-btn">
 
@@ -62,48 +117,60 @@
 
 </div>
 
+</div>
+
 </header>
+
+<!--================ HERO ================-->
 
 <section class="hero" id="home">
 
-<div class="container hero-grid">
+<div class="hero-grid container">
 
 <div class="hero-left">
 
-<div class="hero-badge">
+<div class="live-tag">
 
-🇹🇷 Community Driven • Solana Blockchain
+<span class="pulse"></span>
+
+LIVE ON SOLANA
 
 </div>
 
 <h1>
 
-The Future of Türkiye
-<br>
-Starts Here.
+The Premium
+<span>Türkiye</span>
+
+Community
+
+Token
 
 </h1>
 
 <p>
 
-TÜRKİYE Token is a next-generation community token created to unite people around innovation, culture and blockchain technology.
+Built for the strongest community.
 
-Powered by transparency.
-Built for the people.
+Powered by Solana.
+
+Driven by Türkiye.
+
+The next generation of decentralized culture starts here.
 
 </p>
 
 <div class="hero-buttons">
 
-<a href="#" class="btn-primary big">
+<a href="#" class="buy-btn big">
 
 Buy Token
 
 </a>
 
-<a href="#about" class="btn-outline big">
+<a href="#" class="glass-btn">
 
-Learn More
+Whitepaper
 
 </a>
 
@@ -111,51 +178,51 @@ Learn More
 
 <div class="hero-stats">
 
-<div class="stat">
+<div class="hero-box">
 
-<h3 id="holders">
+<h2 id="holders">
 
 0
 
-</h3>
+</h2>
 
-<span>Holders</span>
+<p>Holders</p>
 
 </div>
 
-<div class="stat">
+<div class="hero-box">
 
-<h3 id="marketcap">
+<h2 id="marketcap">
 
 $0
 
-</h3>
+</h2>
 
-<span>Market Cap</span>
+<p>Market Cap</p>
 
 </div>
 
-<div class="stat">
+<div class="hero-box">
 
-<h3 id="volume">
+<h2 id="volume">
 
 $0
 
-</h3>
+</h2>
 
-<span>24H Volume</span>
+<p>24H Volume</p>
 
 </div>
 
-<div class="stat">
+<div class="hero-box">
 
-<h3 id="telegram">
+<h2 id="members">
 
-0+
+0
 
-</h3>
+</h2>
 
-<span>Telegram</span>
+<p>Community</p>
 
 </div>
 
@@ -165,13 +232,191 @@ $0
 
 <div class="hero-right">
 
-<div class="coin-wrapper">
+<div class="coin-scene">
 
-<div class="glow glow1"></div>
+<div class="coin-light"></div>
 
-<div class="glow glow2"></div>
+<div class="coin-shadow"></div>
 
-<img src="images/coin.png" class="coin" alt="Türkiye Token">
+<img
+src="images/gold-coin.png"
+class="coin"
+alt="Türkiye Coin"
+>
+
+<div class="orbit orbit1"></div>
+
+<div class="orbit orbit2"></div>
+
+<div class="orbit orbit3"></div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="scroll-indicator">
+
+<span></span>
+
+</div>
+
+</section>
+<!--================ TRUST BAR ================-->
+
+<section class="trust-bar">
+
+<div class="container">
+
+<div class="trust-item">
+<i class="fa-solid fa-shield-halved"></i>
+<span>Secure Smart Contract</span>
+</div>
+
+<div class="trust-item">
+<i class="fa-solid fa-bolt"></i>
+<span>Lightning Fast Solana Network</span>
+</div>
+
+<div class="trust-item">
+<i class="fa-solid fa-users"></i>
+<span>Community Driven Project</span>
+</div>
+
+<div class="trust-item">
+<i class="fa-solid fa-lock"></i>
+<span>Transparent & Fair Launch</span>
+</div>
+
+</div>
+
+</section>
+
+<!--================ ABOUT ================-->
+
+<section class="about" id="about">
+
+<div class="container">
+
+<div class="section-head">
+
+<span class="section-tag">
+ABOUT THE PROJECT
+</span>
+
+<h2>
+
+A Community Built
+For The Future Of Türkiye
+
+</h2>
+
+<p>
+
+TÜRKİYE Token is more than a cryptocurrency. It is a global community built on transparency, innovation and decentralization. Our mission is to unite supporters worldwide while creating a sustainable ecosystem powered by Solana.
+
+</p>
+
+</div>
+
+<div class="about-grid">
+
+<div class="about-left">
+
+<div class="glass-card large">
+
+<img src="images/turkey-map-glow.png" alt="Türkiye Map">
+
+<div class="floating-dot dot1"></div>
+<div class="floating-dot dot2"></div>
+<div class="floating-dot dot3"></div>
+
+</div>
+
+</div>
+
+<div class="about-right">
+
+<div class="feature-card">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-globe"></i>
+
+</div>
+
+<div>
+
+<h3>Global Vision</h3>
+
+<p>
+Connecting people from around the world through one strong community.
+</p>
+
+</div>
+
+</div>
+
+<div class="feature-card">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-chart-line"></i>
+
+</div>
+
+<div>
+
+<h3>Long-Term Growth</h3>
+
+<p>
+Focused on sustainable expansion instead of short-term hype.
+</p>
+
+</div>
+
+</div>
+
+<div class="feature-card">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-handshake"></i>
+
+</div>
+
+<div>
+
+<h3>Community First</h3>
+
+<p>
+Every decision is made with the community at the center of the project.
+</p>
+
+</div>
+
+</div>
+
+<div class="feature-card">
+
+<div class="feature-icon">
+
+<i class="fa-solid fa-gem"></i>
+
+</div>
+
+<div>
+
+<h3>Premium Brand</h3>
+
+<p>
+Designed to become one of the most recognizable community tokens on Solana.
+</p>
+
+</div>
+
+</div>
 
 </div>
 
@@ -180,105 +425,43 @@ $0
 </div>
 
 </section>
+
+<!--================ PARTNERS ================-->
 
 <section class="partners">
 
 <div class="container">
 
-<h5>SUPPORTED ECOSYSTEM</h5>
+<div class="partner-title">
 
-<div class="partner-grid">
-
-<div class="partner">SOLANA</div>
-
-<div class="partner">DEXSCREENER</div>
-
-<div class="partner">DEXTOOLS</div>
-
-<div class="partner">JUPITER</div>
-
-<div class="partner">PUMPFUN</div>
-
-<div class="partner">BIRDEYE</div>
+Trusted Ecosystem
 
 </div>
 
+<div class="partners-slider">
+
+<div class="partner-card">
+<img src="images/solana.png" alt="Solana">
 </div>
 
-</section>
-
-<section class="about" id="about">
-
-<div class="container about-grid">
-
-<div class="about-image">
-
-<img src="images/turkiye-flag.png" alt="Türkiye">
-
+<div class="partner-card">
+<img src="images/dexscreener.png" alt="DexScreener">
 </div>
 
-<div class="about-content">
-
-<div class="section-title">
-
-ABOUT TÜRKİYE TOKEN
-
+<div class="partner-card">
+<img src="images/dextools.png" alt="DexTools">
 </div>
 
-<h2>
-
-More Than A Token.
-
-A Global Community.
-
-</h2>
-
-<p>
-
-TÜRKİYE Token aims to create one of the strongest communities on Solana while celebrating innovation, unity and the future of decentralized finance.
-
-We believe blockchain should connect people across borders while preserving culture, transparency and trust.
-
-</p>
-
-<div class="feature-list">
-
-<div class="feature-item">
-
-✔ Fair Launch
-
+<div class="partner-card">
+<img src="images/pumpfun.png" alt="Pump.fun">
 </div>
 
-<div class="feature-item">
-
-✔ Community Driven
-
+<div class="partner-card">
+<img src="images/jupiter.png" alt="Jupiter">
 </div>
 
-<div class="feature-item">
-
-✔ Secure Liquidity
-
-</div>
-
-<div class="feature-item">
-
-✔ Long-Term Vision
-
-</div>
-
-<div class="feature-item">
-
-✔ Transparent Development
-
-</div>
-
-<div class="feature-item">
-
-✔ Active Marketing
-
-</div>
-
+<div class="partner-card">
+<img src="images/birdeye.png" alt="Birdeye">
 </div>
 
 </div>
@@ -286,76 +469,119 @@ We believe blockchain should connect people across borders while preserving cult
 </div>
 
 </section>
+<!--================ FEATURES ================-->
 
 <section class="features" id="features">
 
 <div class="container">
 
-<div class="section-title center">
+<div class="section-head center">
+
+<span class="section-tag">
 
 WHY TÜRKİYE TOKEN
 
-</div>
+</span>
 
-<h2 class="section-heading">
+<h2>
 
-Designed For Sustainable Growth
+Built To Stand Out
 
 </h2>
 
-<div class="cards">
-
-<div class="card">
-
-<div class="icon">🚀</div>
-
-<h3>Fast Growth</h3>
-
 <p>
 
-Focused on organic community expansion with long-term sustainability.
+Designed with transparency, speed and community at its core.
 
 </p>
 
 </div>
 
-<div class="card">
+<div class="features-grid">
 
-<div class="icon">🛡️</div>
+<div class="premium-card">
 
-<h3>Security</h3>
+<div class="premium-icon">
+
+<i class="fa-solid fa-rocket"></i>
+
+</div>
+
+<h3>
+
+Fast & Low Fees
+
+</h3>
 
 <p>
 
-Built with transparency and security as core principles.
+Powered by Solana for lightning-fast transactions with minimal fees.
 
 </p>
 
 </div>
 
-<div class="card">
+<div class="premium-card">
 
-<div class="icon">🌍</div>
+<div class="premium-icon">
 
-<h3>Global Vision</h3>
+<i class="fa-solid fa-shield"></i>
+
+</div>
+
+<h3>
+
+Secure Ecosystem
+
+</h3>
 
 <p>
 
-Connecting Türkiye with crypto enthusiasts worldwide.
+Built with transparency, community trust and long-term sustainability.
 
 </p>
 
 </div>
 
-<div class="card">
+<div class="premium-card">
 
-<div class="icon">💎</div>
+<div class="premium-icon">
 
-<h3>Diamond Holders</h3>
+<i class="fa-solid fa-earth-europe"></i>
+
+</div>
+
+<h3>
+
+Worldwide Community
+
+</h3>
 
 <p>
 
-Rewarding loyal holders who believe in the project's future.
+Growing a global network of supporters united under one vision.
+
+</p>
+
+</div>
+
+<div class="premium-card">
+
+<div class="premium-icon">
+
+<i class="fa-solid fa-gem"></i>
+
+</div>
+
+<h3>
+
+Premium Experience
+
+</h3>
+
+<p>
+
+A modern ecosystem with a premium design and continuous development.
 
 </p>
 
@@ -366,169 +592,274 @@ Rewarding loyal holders who believe in the project's future.
 </div>
 
 </section>
-  <section class="tokenomics" id="tokenomics">
+
+<!--================ LIVE TOKEN ================-->
+
+<section class="live-token">
 
 <div class="container">
 
-<div class="section-title center">
+<div class="section-head center">
+
+<span class="section-tag">
+
+LIVE TOKEN DATA
+
+</span>
+
+<h2>
+
+Real-Time Market Overview
+
+</h2>
+
+</div>
+
+<div class="live-grid">
+
+<div class="live-card">
+
+<span>Token Price</span>
+
+<h3 id="live-price">
+
+Loading...
+
+</h3>
+
+</div>
+
+<div class="live-card">
+
+<span>Market Cap</span>
+
+<h3 id="live-marketcap">
+
+Loading...
+
+</h3>
+
+</div>
+
+<div class="live-card">
+
+<span>Liquidity</span>
+
+<h3 id="live-liquidity">
+
+Loading...
+
+</h3>
+
+</div>
+
+<div class="live-card">
+
+<span>24H Volume</span>
+
+<h3 id="live-volume">
+
+Loading...
+
+</h3>
+
+</div>
+
+<div class="live-card">
+
+<span>24H Buys</span>
+
+<h3 id="live-buys">
+
+Loading...
+
+</h3>
+
+</div>
+
+<div class="live-card">
+
+<span>24H Sells</span>
+
+<h3 id="live-sells">
+
+Loading...
+
+</h3>
+
+</div>
+
+</div>
+
+<div class="chart-wrapper">
+
+<iframe
+src="https://dexscreener.com/solana/5W9fU1hab4titQighG9x1m4c995379JZ2wjM4Ypdpump?embed=1&theme=dark"
+title="DexScreener Chart"
+loading="lazy"
+allowfullscreen>
+</iframe>
+
+</div>
+
+<div class="contract-box">
+
+<div class="contract-left">
+
+<h4>
+
+Contract Address
+
+</h4>
+
+<p id="contractAddress">
+
+5W9fU1hab4titQighG9x1m4c995379JZ2wjM4Ypdpump
+
+</p>
+
+</div>
+
+<button id="copyCA" class="copy-btn">
+
+<i class="fa-solid fa-copy"></i>
+
+Copy
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+<!--================ TOKENOMICS ================-->
+
+<section class="tokenomics" id="tokenomics">
+
+<div class="container">
+
+<div class="section-head center">
+
+<span class="section-tag">
+
 TOKENOMICS
-</div>
 
-<h2 class="section-heading">
-A Fair & Transparent Distribution
+</span>
+
+<h2>
+
+Strong Fundamentals.
+Long-Term Vision.
+
 </h2>
 
-<p class="section-text">
-Built with sustainability, transparency and long-term community growth in mind.
-</p>
-
-<div class="tokenomics-grid">
-
-<div class="token-card gold">
-<h3>🔥 Liquidity Pool</h3>
-<h1>70%</h1>
 <p>
-Locked liquidity providing stability for the ecosystem.
+
+A transparent allocation designed to support sustainable growth and community success.
+
 </p>
+
 </div>
 
-<div class="token-card">
-<h3>📈 Marketing</h3>
-<h1>15%</h1>
+<div class="tokenomics-layout">
+
+<div class="tokenomics-left">
+
+<img src="images/tokenomics-chart.png" alt="Tokenomics Chart">
+
+<div class="glow-ring ring-1"></div>
+<div class="glow-ring ring-2"></div>
+
+</div>
+
+<div class="tokenomics-right">
+
+<div class="token-box">
+
+<div class="token-percent">
+
+70%
+
+</div>
+
+<div>
+
+<h3>Liquidity Pool</h3>
+
 <p>
-Global campaigns, partnerships and community expansion.
+
+Locked liquidity designed to provide a healthier trading environment.
+
 </p>
+
 </div>
 
-<div class="token-card">
-<h3>👨‍💻 Development</h3>
-<h1>10%</h1>
+</div>
+
+<div class="token-box">
+
+<div class="token-percent">
+
+15%
+
+</div>
+
+<div>
+
+<h3>Marketing</h3>
+
 <p>
-Continuous ecosystem improvements and future utilities.
+
+Global marketing campaigns, influencer collaborations and community expansion.
+
 </p>
+
 </div>
 
-<div class="token-card">
-<h3>🎁 Community Rewards</h3>
-<h1>5%</h1>
+</div>
+
+<div class="token-box">
+
+<div class="token-percent">
+
+10%
+
+</div>
+
+<div>
+
+<h3>Development</h3>
+
 <p>
-Giveaways, competitions and holder incentives.
+
+Continuous improvements, utilities and ecosystem growth.
+
 </p>
-</div>
-
-</div>
-
-<div class="token-circle">
-
-<img src="images/tokenomics.png" alt="Tokenomics">
 
 </div>
 
 </div>
 
-</section>
+<div class="token-box">
 
-<section class="roadmap" id="roadmap">
+<div class="token-percent">
 
-<div class="container">
-
-<div class="section-title center">
-ROADMAP
-</div>
-
-<h2 class="section-heading">
-Building The Future Step By Step
-</h2>
-
-<div class="timeline">
-
-<div class="timeline-item">
-
-<div class="timeline-number">
-01
-</div>
-
-<div class="timeline-content">
-
-<h3>Foundation</h3>
-
-<ul>
-<li>Website Launch</li>
-<li>Brand Identity</li>
-<li>Telegram Community</li>
-<li>X (Twitter) Growth</li>
-<li>Fair Launch</li>
-
-</ul>
+5%
 
 </div>
 
-</div>
+<div>
 
-<div class="timeline-item">
+<h3>Community Rewards</h3>
 
-<div class="timeline-number">
-02
-</div>
+<p>
 
-<div class="timeline-content">
+Competitions, giveaways and incentives for loyal holders.
 
-<h3>Community Expansion</h3>
-
-<ul>
-<li>5,000+ Holders</li>
-<li>Global Marketing</li>
-<li>Raid Campaigns</li>
-<li>Meme Contests</li>
-<li>Partnerships</li>
-
-</ul>
+</p>
 
 </div>
-
-</div>
-
-<div class="timeline-item">
-
-<div class="timeline-number">
-03
-</div>
-
-<div class="timeline-content">
-
-<h3>Ecosystem</h3>
-
-<ul>
-<li>DEX Listings</li>
-<li>Coin Tracking Platforms</li>
-<li>Utility Integrations</li>
-<li>NFT Collection</li>
-<li>Community Governance</li>
-
-</ul>
-
-</div>
-
-</div>
-
-<div class="timeline-item">
-
-<div class="timeline-number">
-04
-</div>
-
-<div class="timeline-content">
-
-<h3>Worldwide</h3>
-
-<ul>
-<li>100K+ Community</li>
-<li>Major Exchange Listings</li>
-<li>International Campaigns</li>
-<li>Real Partnerships</li>
-<li>Long-Term Development</li>
-
-</ul>
 
 </div>
 
@@ -540,77 +871,61 @@ Building The Future Step By Step
 
 </section>
 
-<section class="live-stats">
-
-<div class="container">
-
-<div class="stats-grid">
-
-<div class="live-box">
-<h2 id="counter1">0</h2>
-<span>Community Members</span>
-</div>
-
-<div class="live-box">
-<h2 id="counter2">0</h2>
-<span>Total Transactions</span>
-</div>
-
-<div class="live-box">
-<h2 id="counter3">0</h2>
-<span>Total Volume</span>
-</div>
-
-<div class="live-box">
-<h2 id="counter4">0</h2>
-<span>Countries Reached</span>
-</div>
-
-</div>
-
-</div>
-
-</section>
+<!--================ COMMUNITY ================-->
 
 <section class="community" id="community">
 
 <div class="container">
 
-<div class="section-title center">
-JOIN THE COMMUNITY
-</div>
+<div class="community-banner">
 
-<h2 class="section-heading">
-Together We Build Türkiye Token
+<div class="community-content">
+
+<span>
+
+JOIN OUR COMMUNITY
+
+</span>
+
+<h2>
+
+Be Part Of The Türkiye Movement
+
 </h2>
 
-<p class="section-text">
+<p>
 
-Join thousands of supporters helping shape one of the strongest crypto communities.
+Connect with thousands of supporters, stay informed about updates and help shape the future of TÜRKİYE Token.
 
 </p>
 
 <div class="community-buttons">
 
-<a href="#" class="community-btn telegram">
+<a href="https://t.me/TURKIYEttoken"
+target="_blank"
+class="telegram-btn">
+
+<i class="fa-brands fa-telegram"></i>
 
 Telegram
 
 </a>
 
-<a href="#" class="community-btn twitter">
+<a href="https://x.com/TURKIYEtokenn"
+target="_blank"
+class="twitter-btn">
 
-X (Twitter)
+<i class="fa-brands fa-x-twitter"></i>
 
-</a>
-
-<a href="#" class="community-btn chart">
-
-DexScreener
+Follow on X
 
 </a>
 
-<a href="#" class="community-btn buy">
+<a href="https://join.pump.fun/HSag/xwndqcow"
+target="_blank"
+class="buy-btn">
+
+<i class="fa-solid fa-coins"></i>
 
 Buy Now
 
@@ -620,83 +935,9 @@ Buy Now
 
 </div>
 
-</section>
-  <section class="faq" id="faq">
+<div class="community-image">
 
-<div class="container">
-
-<div class="section-title center">
-FAQ
-</div>
-
-<h2 class="section-heading">
-Frequently Asked Questions
-</h2>
-
-<div class="faq-wrapper">
-
-<div class="faq-item active">
-
-<div class="faq-question">
-What is TÜRKİYE Token?
-<span>+</span>
-</div>
-
-<div class="faq-answer">
-TÜRKİYE Token is a community-driven cryptocurrency built on the Solana blockchain with a focus on transparency, long-term growth and global adoption.
-</div>
-
-</div>
-
-<div class="faq-item">
-
-<div class="faq-question">
-Which blockchain is it built on?
-<span>+</span>
-</div>
-
-<div class="faq-answer">
-The project is built on Solana for fast transactions, low fees and excellent scalability.
-</div>
-
-</div>
-
-<div class="faq-item">
-
-<div class="faq-question">
-Is liquidity locked?
-<span>+</span>
-</div>
-
-<div class="faq-answer">
-Yes. Liquidity security and transparency are core priorities of the project.
-</div>
-
-</div>
-
-<div class="faq-item">
-
-<div class="faq-question">
-Where can I buy the token?
-<span>+</span>
-</div>
-
-<div class="faq-answer">
-The token can be purchased through the official buy links listed on the website after launch.
-</div>
-
-</div>
-
-<div class="faq-item">
-
-<div class="faq-question">
-How can I join the community?
-<span>+</span>
-</div>
-
-<div class="faq-answer">
-Join our Telegram and follow us on X to stay updated with announcements, events and community activities.
-</div>
+<img src="images/community-coin.png" alt="Türkiye Token">
 
 </div>
 
@@ -705,32 +946,129 @@ Join our Telegram and follow us on X to stay updated with announcements, events 
 </div>
 
 </section>
+<!--================ ROADMAP ================-->
 
-<section class="cta">
+<section class="roadmap" id="roadmap">
 
 <div class="container">
 
-<div class="cta-box">
+<div class="section-head center">
+
+<span class="section-tag">
+
+ROADMAP
+
+</span>
 
 <h2>
-The Future Starts With The Community.
+
+Our Journey Has Just Begun
+
 </h2>
 
 <p>
 
-Become part of the movement and help build the strongest Türkiye crypto community.
+Building a long-term ecosystem with transparency, innovation and a strong community.
 
 </p>
 
-<div class="cta-buttons">
+</div>
 
-<a href="#" class="btn-primary big">
-Buy TÜRKİYE Token
-</a>
+<div class="roadmap-wrapper">
 
-<a href="#" class="btn-outline big">
-Join Telegram
-</a>
+<div class="roadmap-item completed">
+
+<div class="roadmap-dot"></div>
+
+<div class="roadmap-content">
+
+<span>PHASE 01</span>
+
+<h3>Launch</h3>
+
+<ul>
+
+<li>✓ Brand Identity</li>
+<li>✓ Website Launch</li>
+<li>✓ Telegram Community</li>
+<li>✓ X (Twitter) Launch</li>
+<li>✓ Pump.fun Launch</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="roadmap-item active">
+
+<div class="roadmap-dot"></div>
+
+<div class="roadmap-content">
+
+<span>PHASE 02</span>
+
+<h3>Community Growth</h3>
+
+<ul>
+
+<li>Community Raids</li>
+<li>Marketing Campaigns</li>
+<li>Influencer Partnerships</li>
+<li>DexScreener Boost</li>
+<li>10,000+ Holders Target</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="roadmap-item">
+
+<div class="roadmap-dot"></div>
+
+<div class="roadmap-content">
+
+<span>PHASE 03</span>
+
+<h3>Ecosystem Expansion</h3>
+
+<ul>
+
+<li>Coin Listing Platforms</li>
+<li>Strategic Partnerships</li>
+<li>NFT Collection</li>
+<li>Staking Utilities</li>
+<li>Global Community Events</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="roadmap-item">
+
+<div class="roadmap-dot"></div>
+
+<div class="roadmap-content">
+
+<span>PHASE 04</span>
+
+<h3>Worldwide Recognition</h3>
+
+<ul>
+
+<li>100K+ Community</li>
+<li>Major Exchange Listings</li>
+<li>International Marketing</li>
+<li>Real-World Collaborations</li>
+<li>Long-Term Ecosystem Growth</li>
+
+</ul>
+
+</div>
 
 </div>
 
@@ -739,30 +1077,258 @@ Join Telegram
 </div>
 
 </section>
+
+<!--================ FAQ ================-->
+
+<section class="faq" id="faq">
+
+<div class="container">
+
+<div class="section-head center">
+
+<span class="section-tag">
+
+FAQ
+
+</span>
+
+<h2>
+
+Frequently Asked Questions
+
+</h2>
+
+</div>
+
+<div class="faq-container">
+
+<div class="faq-item active">
+
+<button class="faq-question">
+
+What is TÜRKİYE Token?
+
+<i class="fa-solid fa-plus"></i>
+
+</button>
+
+<div class="faq-answer">
+
+<p>
+
+TÜRKİYE Token is a community-driven cryptocurrency built on the Solana blockchain, focused on transparency, long-term growth and creating one of the strongest crypto communities.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+Which blockchain is the token on?
+
+<i class="fa-solid fa-plus"></i>
+
+</button>
+
+<div class="faq-answer">
+
+<p>
+
+The token is deployed on the Solana blockchain, providing fast transactions and low fees.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+How do I buy TÜRKİYE Token?
+
+<i class="fa-solid fa-plus"></i>
+
+</button>
+
+<div class="faq-answer">
+
+<p>
+
+Click the "Buy Now" button on this website to purchase directly through Pump.fun.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+Where can I follow project updates?
+
+<i class="fa-solid fa-plus"></i>
+
+</button>
+
+<div class="faq-answer">
+
+<p>
+
+Join our Telegram community and follow our official X account for announcements, events and development updates.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!--================ FOOTER CTA ================-->
+
+<section class="footer-cta">
+
+<div class="container">
+
+<div class="footer-cta-box">
+
+<div class="footer-cta-content">
+
+<span>
+
+THE FUTURE STARTS TODAY
+
+</span>
+
+<h2>
+
+Join The Strongest
+Türkiye Crypto Community
+
+</h2>
+
+<p>
+
+Become part of a fast-growing movement built on transparency, innovation and the power of community.
+
+</p>
+
+<div class="footer-cta-buttons">
+
+<a href="https://join.pump.fun/HSag/xwndqcow"
+target="_blank"
+class="buy-btn">
+
+<i class="fa-solid fa-coins"></i>
+
+Buy Now
+
+</a>
+
+<a href="https://t.me/TURKIYEttoken"
+target="_blank"
+class="glass-btn">
+
+<i class="fa-brands fa-telegram"></i>
+
+Telegram
+
+</a>
+
+</div>
+
+</div>
+
+<div class="footer-cta-image">
+
+<img
+src="images/gold-coin-3d.png"
+alt="Türkiye Token">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!--================ FOOTER ================-->
 
 <footer class="footer">
 
 <div class="container">
 
-<div class="footer-top">
+<div class="footer-grid">
 
 <div class="footer-brand">
 
-<img src="images/logo.png" alt="Türkiye Token Logo">
+<img
+src="images/logo.png"
+alt="Türkiye Token">
 
-<h3>TÜRKİYE TOKEN</h3>
+<h3>
+
+TÜRKİYE TOKEN
+
+</h3>
 
 <p>
 
-Community • Transparency • Innovation • Freedom
+A premium community token powered by Solana.
+
+Built for transparency, speed and long-term growth.
 
 </p>
+
+<div class="socials">
+
+<a
+href="https://x.com/TURKIYEtokenn"
+target="_blank">
+
+<i class="fa-brands fa-x-twitter"></i>
+
+</a>
+
+<a
+href="https://t.me/TURKIYEttoken"
+target="_blank">
+
+<i class="fa-brands fa-telegram"></i>
+
+</a>
+
+<a
+href="https://join.pump.fun/HSag/xwndqcow"
+target="_blank">
+
+<i class="fa-solid fa-coins"></i>
+
+</a>
+
+</div>
 
 </div>
 
 <div class="footer-links">
 
-<h4>Navigation</h4>
+<h4>
+
+Navigation
+
+</h4>
 
 <a href="#home">Home</a>
 <a href="#about">About</a>
@@ -775,23 +1341,63 @@ Community • Transparency • Innovation • Freedom
 
 <div class="footer-links">
 
-<h4>Community</h4>
+<h4>
 
-<a href="#">Telegram</a>
-<a href="#">X (Twitter)</a>
-<a href="#">DexScreener</a>
-<a href="#">Pump.fun</a>
+Resources
+
+</h4>
+
+<a href="https://join.pump.fun/HSag/xwndqcow" target="_blank">
+
+Buy Token
+
+</a>
+
+<a href="#">
+
+Whitepaper
+
+</a>
+
+<a href="#">
+
+Brand Kit
+
+</a>
+
+<a href="#community">
+
+Community
+
+</a>
 
 </div>
 
 <div class="footer-links">
 
-<h4>Resources</h4>
+<h4>
 
-<a href="#">Whitepaper</a>
-<a href="#">Audit</a>
-<a href="#">Brand Kit</a>
-<a href="#">Contact</a>
+Contract Address
+
+</h4>
+
+<div class="footer-contract">
+
+<p>
+
+5W9fU1hab4titQighG9x1m4c995379JZ2wjM4Ypdpump
+
+</p>
+
+<button id="footerCopyCA">
+
+<i class="fa-solid fa-copy"></i>
+
+Copy CA
+
+</button>
+
+</div>
 
 </div>
 
@@ -801,13 +1407,13 @@ Community • Transparency • Innovation • Freedom
 
 <p>
 
-© 2026 TÜRKİYE Token. All Rights Reserved.
+© <span id="year"></span> TÜRKİYE Token. All Rights Reserved.
 
 </p>
 
 <p>
 
-Built with ❤️ for the global Türkiye community.
+Built for the Global Türkiye Community 🇹🇷
 
 </p>
 
@@ -817,16 +1423,13 @@ Built with ❤️ for the global Türkiye community.
 
 </footer>
 
-<div class="scroll-top" id="scrollTop">
+<button id="scrollTop" class="scroll-top">
 
-↑
+<i class="fa-solid fa-arrow-up"></i>
 
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</button>
 
 <script src="script.js"></script>
 
 </body>
 </html>
-
