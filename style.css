@@ -3430,3 +3430,1895 @@ section{
 animation:fadeUp .8s ease;
 
 }
+/* =========================================================
+   TÜRKİYE TOKEN PREMIUM V2
+   BACKGROUND & IMAGE UPGRADE
+========================================================= */
+
+
+/* FULL SCREEN SECTIONS */
+
+.hero,
+.future-section,
+.community-section,
+footer{
+
+min-height:100vh;
+
+}
+
+
+/* REMOVE IMAGE BOX FEEL */
+
+.hero-image,
+.future-background,
+.community-bg,
+.footer-background{
+
+position:absolute;
+
+inset:0;
+
+overflow:hidden;
+
+}
+
+
+
+/* FULL BACKGROUND IMAGES */
+
+.hero-image img,
+.future-background img,
+.community-bg img,
+.footer-background img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+object-position:center;
+
+transform:scale(1.08);
+
+}
+
+
+
+/* HERO IMAGE PREMIUM LOOK */
+
+.hero-image::after{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+
+linear-gradient(
+180deg,
+rgba(0,0,0,.25),
+rgba(0,0,0,.88)
+),
+
+radial-gradient(
+circle at center,
+transparent 20%,
+rgba(0,0,0,.65) 100%
+);
+
+}
+
+
+
+/* MOVING LIGHT OVER HERO */
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+width:900px;
+
+height:900px;
+
+top:-250px;
+
+right:-200px;
+
+background:
+
+radial-gradient(
+circle,
+rgba(212,175,55,.25),
+transparent 65%
+);
+
+filter:blur(50px);
+
+animation:goldMove 8s infinite alternate;
+
+z-index:2;
+
+}
+
+
+
+@keyframes goldMove{
+
+from{
+
+transform:translate(0,0);
+
+}
+
+to{
+
+transform:translate(-80px,80px);
+
+}
+
+}
+
+
+
+/* ALL BACKGROUND SECTIONS */
+
+.future-section,
+.community-section,
+footer{
+
+isolation:isolate;
+
+}
+
+
+
+/* FUTURE IMAGE */
+
+.future-background img{
+
+filter:
+
+brightness(.35)
+contrast(1.15)
+saturate(1.15);
+
+}
+
+
+
+/* COMMUNITY IMAGE */
+
+.community-bg img{
+
+filter:
+
+brightness(.30)
+contrast(1.2);
+
+}
+
+
+
+/* FOOTER IMAGE */
+
+.footer-background img{
+
+filter:
+
+brightness(.20)
+contrast(1.1);
+
+}
+
+
+
+/* GLASS SECTIONS */
+
+.ecosystem-card,
+.token-card,
+.info-card,
+.security-card,
+.partner-card,
+.timeline-card{
+
+background:
+
+linear-gradient(
+135deg,
+rgba(255,255,255,.10),
+rgba(255,255,255,.03)
+);
+
+backdrop-filter:
+
+blur(25px);
+
+}
+
+
+
+/* IMAGE CARD FIX */
+
+.ecosystem-card{
+
+overflow:hidden;
+
+min-height:520px;
+
+}
+
+
+
+.ecosystem-card img{
+
+height:320px;
+
+object-fit:cover;
+
+width:100%;
+
+}
+
+
+
+/* IMAGE ZOOM EFFECT */
+
+.ecosystem-card:hover img{
+
+transform:scale(1.12);
+
+}
+
+
+
+/* PREMIUM GRID BACKGROUND */
+
+section::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background-image:
+
+linear-gradient(
+rgba(255,255,255,.025) 1px,
+transparent 1px
+),
+
+linear-gradient(
+90deg,
+rgba(255,255,255,.025) 1px,
+transparent 1px
+);
+
+background-size:
+
+80px 80px;
+
+pointer-events:none;
+
+z-index:-1;
+
+}
+
+
+
+/* GOLD BORDER GLOW */
+
+.primary-btn,
+.buy-button{
+
+box-shadow:
+
+0 0 35px rgba(212,175,55,.45);
+
+}
+
+
+
+/* BETTER HEADINGS */
+
+.section-title h2,
+.hero-left h1,
+.future-content h2,
+.community-content h2{
+
+text-shadow:
+
+0 0 35px rgba(212,175,55,.15);
+
+}
+
+
+
+/* REMOVE BLACK EMPTY FEEL */
+
+.about-image img{
+
+width:100%;
+
+height:600px;
+
+object-fit:cover;
+
+object-position:center;
+
+}
+
+
+
+/* MOBILE IMAGE FIX */
+
+@media(max-width:768px){
+
+.hero-image img,
+.future-background img,
+.community-bg img,
+.footer-background img{
+
+object-position:center;
+
+transform:scale(1.15);
+
+}
+
+
+.about-image img{
+
+height:400px;
+
+}
+
+}
+/* =========================================================
+   TÜRKİYE TOKEN PREMIUM V2
+   COIN + TOKENOMICS UPGRADE
+========================================================= */
+
+
+/* ===========================
+   HERO COIN UPGRADE
+=========================== */
+
+.hero-right{
+
+perspective:1200px;
+
+}
+
+
+
+.hero-coin{
+
+width:480px;
+
+position:relative;
+
+z-index:5;
+
+filter:
+
+drop-shadow(0 0 40px rgba(212,175,55,.45))
+drop-shadow(0 40px 70px rgba(0,0,0,.8));
+
+animation:
+
+premiumFloat 5s ease-in-out infinite;
+
+}
+
+
+
+@keyframes premiumFloat{
+
+0%{
+
+transform:
+
+translateY(0)
+rotateY(0deg);
+
+}
+
+50%{
+
+transform:
+
+translateY(-25px)
+rotateY(8deg);
+
+}
+
+100%{
+
+transform:
+
+translateY(0)
+rotateY(0deg);
+
+}
+
+}
+
+
+
+/* COIN ENERGY RINGS */
+
+.hero-right::before{
+
+content:"";
+
+position:absolute;
+
+width:650px;
+
+height:650px;
+
+border-radius:50%;
+
+border:
+
+1px solid rgba(212,175,55,.35);
+
+animation:
+
+energyRotate 18s linear infinite;
+
+}
+
+
+
+.hero-right::after{
+
+content:"";
+
+position:absolute;
+
+width:520px;
+
+height:520px;
+
+border-radius:50%;
+
+border:
+
+2px dashed rgba(212,175,55,.18);
+
+animation:
+
+energyRotate 25s linear infinite reverse;
+
+}
+
+
+
+@keyframes energyRotate{
+
+from{
+
+transform:rotate(0deg);
+
+}
+
+to{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+
+
+/* FLOATING INFO CARDS */
+
+.floating-card{
+
+background:
+
+linear-gradient(
+
+135deg,
+
+rgba(212,175,55,.15),
+
+rgba(255,255,255,.05)
+
+);
+
+border:
+
+1px solid rgba(212,175,55,.35);
+
+box-shadow:
+
+0 0 40px rgba(212,175,55,.18);
+
+}
+
+
+
+/* ===========================
+TOKENOMICS DASHBOARD
+=========================== */
+
+
+.tokenomics-wrapper{
+
+position:relative;
+
+}
+
+
+
+.tokenomics-right{
+
+background:
+
+rgba(255,255,255,.03);
+
+padding:35px;
+
+border-radius:40px;
+
+border:
+
+1px solid rgba(255,255,255,.08);
+
+}
+
+
+
+.token-card{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+
+
+.token-card::after{
+
+content:"";
+
+position:absolute;
+
+bottom:0;
+
+left:0;
+
+height:3px;
+
+width:0;
+
+background:
+
+linear-gradient(
+90deg,
+#d4af37,
+#f6d365
+);
+
+transition:.5s;
+
+}
+
+
+
+.token-card:hover::after{
+
+width:100%;
+
+}
+
+
+
+
+/* TOKEN COIN PLATFORM */
+
+.coin-platform{
+
+background:
+
+radial-gradient(
+
+circle,
+
+rgba(212,175,55,.12),
+
+transparent 60%
+
+);
+
+border-radius:50%;
+
+}
+
+
+
+/* ROTATING CIRCLES */
+
+.coin-ring{
+
+box-shadow:
+
+0 0 40px rgba(212,175,55,.15);
+
+}
+
+
+
+/* ===========================
+TOKENOMICS GRAPH STYLE
+=========================== */
+
+
+.token-chart{
+
+width:280px;
+
+height:280px;
+
+border-radius:50%;
+
+background:
+
+conic-gradient(
+
+#d4af37 0deg 120deg,
+
+#e11d48 120deg 210deg,
+
+#ffffff 210deg 260deg,
+
+#333 260deg 360deg
+
+);
+
+margin:auto;
+
+position:relative;
+
+animation:
+
+chartSpin 20s linear infinite;
+
+}
+
+
+
+.token-chart::before{
+
+content:"";
+
+position:absolute;
+
+inset:35px;
+
+background:#050505;
+
+border-radius:50%;
+
+}
+
+
+
+@keyframes chartSpin{
+
+from{
+
+transform:rotate(0deg);
+
+}
+
+to{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+
+
+/* ===========================
+WEB3 DATA BOXES
+=========================== */
+
+
+.data-box{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:22px;
+
+margin-top:20px;
+
+background:
+
+rgba(255,255,255,.05);
+
+border-radius:20px;
+
+border:
+
+1px solid rgba(255,255,255,.08);
+
+}
+
+
+
+.data-box span:first-child{
+
+color:#aaa;
+
+}
+
+
+
+.data-box span:last-child{
+
+color:var(--gold);
+
+font-family:'Orbitron';
+
+}
+
+
+
+/* ===========================
+PARTICLE EFFECT
+=========================== */
+
+
+.hero-right .particle{
+
+position:absolute;
+
+width:6px;
+
+height:6px;
+
+background:
+
+var(--gold);
+
+border-radius:50%;
+
+box-shadow:
+
+0 0 20px var(--gold);
+
+animation:
+
+particleMove 8s infinite;
+
+}
+
+
+
+@keyframes particleMove{
+
+0%{
+
+transform:
+
+translateY(100px);
+
+opacity:0;
+
+}
+
+50%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:
+
+translateY(-300px);
+
+opacity:0;
+
+}
+
+}
+
+
+
+
+/* MOBILE COIN */
+
+@media(max-width:768px){
+
+.hero-coin{
+
+width:300px;
+
+}
+
+.hero-right::before{
+
+width:420px;
+
+height:420px;
+
+}
+
+.hero-right::after{
+
+width:350px;
+
+height:350px;
+
+}
+
+}
+/* =========================================================
+   TÜRKİYE TOKEN PREMIUM V2
+   WEB3 ANIMATION SYSTEM
+========================================================= */
+
+
+/* ===========================
+   STAR BACKGROUND
+=========================== */
+
+body{
+
+background:
+
+radial-gradient(
+circle at top,
+rgba(212,175,55,.08),
+transparent 35%
+),
+
+#050505;
+
+}
+
+
+
+body::before{
+
+animation:
+
+backgroundMove 15s ease-in-out infinite alternate;
+
+}
+
+
+
+@keyframes backgroundMove{
+
+0%{
+
+transform:translate(0,0);
+
+}
+
+100%{
+
+transform:translate(80px,60px);
+
+}
+
+}
+
+
+
+
+/* ===========================
+   BLOCKCHAIN GRID
+=========================== */
+
+
+.ecosystem-section,
+.tokenomics-section,
+.roadmap-section{
+
+overflow:hidden;
+
+}
+
+
+
+.ecosystem-section::after,
+.tokenomics-section::after,
+.roadmap-section::after{
+
+content:"";
+
+position:absolute;
+
+width:900px;
+
+height:900px;
+
+right:-400px;
+
+top:50%;
+
+background:
+
+radial-gradient(
+
+circle,
+
+rgba(212,175,55,.10),
+
+transparent 70%
+
+);
+
+filter:blur(80px);
+
+animation:
+
+webGlow 10s infinite alternate;
+
+z-index:-1;
+
+}
+
+
+
+@keyframes webGlow{
+
+from{
+
+transform:scale(1);
+
+}
+
+to{
+
+transform:scale(1.3);
+
+}
+
+}
+
+
+
+
+/* ===========================
+   NODE EFFECT
+=========================== */
+
+
+.blockchain-node{
+
+position:absolute;
+
+width:12px;
+
+height:12px;
+
+border-radius:50%;
+
+background:#d4af37;
+
+box-shadow:
+
+0 0 25px #d4af37;
+
+animation:
+
+nodePulse 3s infinite;
+
+}
+
+
+
+@keyframes nodePulse{
+
+0%{
+
+transform:scale(1);
+
+opacity:.5;
+
+}
+
+50%{
+
+transform:scale(1.8);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:scale(1);
+
+opacity:.5;
+
+}
+
+}
+
+
+
+
+/* ===========================
+   SHINE EFFECT
+=========================== */
+
+
+section h2{
+
+position:relative;
+
+}
+
+
+
+section h2::after{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+
+bottom:-15px;
+
+transform:translateX(-50%);
+
+width:120px;
+
+height:3px;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+var(--gold),
+
+transparent
+
+);
+
+animation:
+
+lineMove 3s infinite;
+
+}
+
+
+
+@keyframes lineMove{
+
+0%{
+
+width:40px;
+
+opacity:.3;
+
+}
+
+50%{
+
+width:180px;
+
+opacity:1;
+
+}
+
+100%{
+
+width:40px;
+
+opacity:.3;
+
+}
+
+}
+
+
+
+
+
+/* ===========================
+   PREMIUM BUTTON ANIMATION
+=========================== */
+
+
+.primary-btn,
+.buy-button{
+
+animation:
+
+buttonGlow 3s infinite;
+
+}
+
+
+
+@keyframes buttonGlow{
+
+0%{
+
+box-shadow:
+
+0 0 20px rgba(212,175,55,.25);
+
+}
+
+50%{
+
+box-shadow:
+
+0 0 45px rgba(212,175,55,.65);
+
+}
+
+100%{
+
+box-shadow:
+
+0 0 20px rgba(212,175,55,.25);
+
+}
+
+}
+
+
+
+
+/* ===========================
+   CARD 3D HOVER
+=========================== */
+
+
+.info-card,
+.ecosystem-card,
+.token-card,
+.security-card,
+.partner-card,
+.timeline-card{
+
+transform-style:preserve-3d;
+
+}
+
+
+
+.info-card:hover,
+.ecosystem-card:hover,
+.token-card:hover,
+.security-card:hover,
+.partner-card:hover,
+.timeline-card:hover{
+
+transform:
+
+translateY(-12px)
+
+rotateX(3deg);
+
+}
+
+
+
+
+/* ===========================
+   COMMUNITY PREMIUM EFFECT
+=========================== */
+
+
+.community-section::before{
+
+content:"";
+
+position:absolute;
+
+width:600px;
+
+height:600px;
+
+left:-200px;
+
+top:20%;
+
+background:
+
+radial-gradient(
+
+circle,
+
+rgba(225,29,72,.18),
+
+transparent 70%
+
+);
+
+filter:blur(70px);
+
+animation:
+
+redGlow 8s infinite alternate;
+
+}
+
+
+
+@keyframes redGlow{
+
+from{
+
+transform:translateX(0);
+
+}
+
+to{
+
+transform:translateX(150px);
+
+}
+
+}
+
+
+
+
+/* ===========================
+   SCROLL PROGRESS
+=========================== */
+
+
+.scroll-progress{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+height:4px;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+#d4af37,
+
+#f6d365
+
+);
+
+z-index:999999;
+
+width:0%;
+
+}
+
+
+
+
+/* ===========================
+   IMAGE CINEMA EFFECT
+=========================== */
+
+
+.future-background img,
+.community-bg img,
+.hero-image img{
+
+animation:
+
+cinemaImage 18s ease-in-out infinite alternate;
+
+}
+
+
+
+@keyframes cinemaImage{
+
+from{
+
+transform:scale(1.08);
+
+}
+
+to{
+
+transform:scale(1.16);
+
+}
+
+}
+
+
+
+
+/* ===========================
+   MOBILE FIX
+=========================== */
+
+
+@media(max-width:768px){
+
+section h2::after{
+
+bottom:-10px;
+
+}
+
+
+.community-section::before{
+
+display:none;
+
+}
+
+}
+/* =========================================================
+   TÜRKİYE TOKEN PREMIUM V2
+   FINAL POLISH & RESPONSIVE
+========================================================= */
+
+
+/* ===========================
+   NAVBAR PREMIUM
+=========================== */
+
+
+header{
+
+transition:.4s ease;
+
+}
+
+
+
+header.scrolled{
+
+background:
+
+rgba(5,5,5,.92);
+
+backdrop-filter:
+
+blur(25px);
+
+border-bottom:
+
+1px solid rgba(212,175,55,.18);
+
+}
+
+
+
+
+.logo img{
+
+transition:.5s;
+
+}
+
+
+
+.logo:hover img{
+
+transform:
+
+rotate(10deg)
+scale(1.1);
+
+}
+
+
+
+
+/* ===========================
+   HERO FINAL FIX
+=========================== */
+
+
+.hero{
+
+min-height:100vh;
+
+}
+
+
+
+.hero-container{
+
+min-height:850px;
+
+}
+
+
+
+.hero-left{
+
+animation:
+
+heroText .9s ease forwards;
+
+}
+
+
+
+.hero-right{
+
+animation:
+
+heroCoin .9s ease .2s forwards;
+
+}
+
+
+
+@keyframes heroText{
+
+from{
+
+opacity:0;
+
+transform:
+
+translateX(-60px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:
+
+translateX(0);
+
+}
+
+}
+
+
+
+@keyframes heroCoin{
+
+from{
+
+opacity:0;
+
+transform:
+
+translateX(60px)
+scale(.8);
+
+}
+
+to{
+
+opacity:1;
+
+transform:
+
+translateX(0)
+scale(1);
+
+}
+
+}
+
+
+
+
+/* ===========================
+   IMAGE SECTIONS
+=========================== */
+
+
+.future-section,
+.community-section{
+
+background-attachment:fixed;
+
+}
+
+
+
+.ecosystem-card img{
+
+aspect-ratio:
+
+16/9;
+
+object-fit:cover;
+
+}
+
+
+
+.about-image{
+
+overflow:hidden;
+
+border-radius:35px;
+
+}
+
+
+
+.about-image img{
+
+transition:
+
+transform 1s ease;
+
+}
+
+
+
+.about-image:hover img{
+
+transform:
+
+scale(1.08);
+
+}
+
+
+
+
+/* ===========================
+   ROADMAP IMPROVEMENT
+=========================== */
+
+
+.timeline-card{
+
+background:
+
+linear-gradient(
+
+135deg,
+
+rgba(255,255,255,.08),
+
+rgba(255,255,255,.02)
+
+);
+
+}
+
+
+
+.timeline-card h3{
+
+letter-spacing:2px;
+
+}
+
+
+
+
+/* ===========================
+   FOOTER PREMIUM
+=========================== */
+
+
+footer{
+
+border-top:
+
+1px solid rgba(212,175,55,.15);
+
+}
+
+
+
+.footer-container{
+
+backdrop-filter:
+
+blur(10px);
+
+}
+
+
+
+.footer-logo{
+
+filter:
+
+drop-shadow(
+
+0 0 25px rgba(212,175,55,.5)
+
+);
+
+}
+
+
+
+.footer-bottom p{
+
+letter-spacing:1px;
+
+}
+
+
+
+
+/* ===========================
+   MOBILE PREMIUM
+=========================== */
+
+
+@media(max-width:900px){
+
+
+.hero-container{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+
+
+.hero-left{
+
+margin:auto;
+
+}
+
+
+
+.hero-left h1{
+
+font-size:48px;
+
+}
+
+
+
+.hero-left p{
+
+font-size:17px;
+
+}
+
+
+
+.hero-buttons{
+
+justify-content:center;
+
+}
+
+
+
+.contract-box{
+
+flex-direction:column;
+
+}
+
+
+
+.hero-right{
+
+min-height:500px;
+
+}
+
+
+
+.hero-coin{
+
+width:300px;
+
+}
+
+
+
+.about-grid{
+
+gap:40px;
+
+}
+
+
+
+.tokenomics-wrapper{
+
+gap:40px;
+
+}
+
+
+
+.tokenomics-right{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+.footer-container{
+
+text-align:center;
+
+}
+
+
+
+.footer-ca{
+
+align-items:center;
+
+}
+
+
+
+}
+
+
+
+
+@media(max-width:600px){
+
+
+section{
+
+padding:
+
+80px 5%;
+
+}
+
+
+
+.section-title h2{
+
+font-size:34px;
+
+}
+
+
+
+.hero-left h1{
+
+font-size:38px;
+
+}
+
+
+
+.primary-btn,
+.secondary-btn{
+
+width:100%;
+
+text-align:center;
+
+}
+
+
+
+.floating-card{
+
+display:none;
+
+}
+
+
+
+.ecosystem-card{
+
+min-height:auto;
+
+}
+
+
+
+.coin-ring{
+
+display:none;
+
+}
+
+
+
+.future-content h2,
+.community-content h2{
+
+font-size:34px;
+
+}
+
+
+
+.stat-card h2{
+
+font-size:40px;
+
+}
+
+
+
+}
+
+
+
+
+/* ===========================
+   FINAL WEB3 TOUCH
+=========================== */
+
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+
+
+::-webkit-scrollbar-thumb{
+
+background:
+
+linear-gradient(
+
+var(--gold),
+
+#f6d365
+
+);
+
+}
+
+
+
+button{
+
+font-family:inherit;
+
+}
+
+
+
+input{
+
+font-family:inherit;
+
+}
+
+
+/* END PREMIUM V2 */
+
