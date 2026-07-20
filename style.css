@@ -5321,4 +5321,417 @@ font-family:inherit;
 
 
 /* END PREMIUM V2 */
+/* =========================================================
+   PREMIUM EXTRAS STYLE
+   TRUST + EXCHANGE + BACK TOP
+========================================================= */
+
+
+/* ===========================
+SCROLL PROGRESS
+=========================== */
+
+.scroll-progress{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+height:4px;
+
+width:0%;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+#d4af37,
+
+#f6d365
+
+);
+
+z-index:999999;
+
+box-shadow:
+
+0 0 20px rgba(212,175,55,.8);
+
+}
+
+
+
+
+
+/* ===========================
+BACK TO TOP
+=========================== */
+
+
+#backTop{
+
+position:fixed;
+
+right:35px;
+
+bottom:35px;
+
+width:55px;
+
+height:55px;
+
+border-radius:50%;
+
+border:none;
+
+background:
+
+linear-gradient(
+
+135deg,
+
+#d4af37,
+
+#f6d365
+
+);
+
+color:#000;
+
+font-size:28px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+opacity:0;
+
+visibility:hidden;
+
+transform:translateY(20px);
+
+transition:.4s;
+
+z-index:9999;
+
+box-shadow:
+
+0 0 35px rgba(212,175,55,.45);
+
+}
+
+
+
+#backTop.show{
+
+opacity:1;
+
+visibility:visible;
+
+transform:translateY(0);
+
+}
+
+
+
+#backTop:hover{
+
+transform:translateY(-8px);
+
+}
+
+
+
+
+/* ===========================
+TRUST SECTION
+=========================== */
+
+
+.trust-section{
+
+background:#050505;
+
+}
+
+
+
+.trust-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:30px;
+
+}
+
+
+
+.trust-card{
+
+padding:40px 30px;
+
+text-align:center;
+
+border-radius:30px;
+
+background:
+
+linear-gradient(
+
+135deg,
+
+rgba(255,255,255,.08),
+
+rgba(255,255,255,.02)
+
+);
+
+border:
+
+1px solid rgba(255,255,255,.10);
+
+backdrop-filter:blur(20px);
+
+transition:.4s;
+
+}
+
+
+
+.trust-card:hover{
+
+transform:
+
+translateY(-12px);
+
+border-color:
+
+rgba(212,175,55,.5);
+
+box-shadow:
+
+0 25px 60px rgba(0,0,0,.4);
+
+}
+
+
+
+.trust-card div{
+
+font-size:50px;
+
+margin-bottom:20px;
+
+}
+
+
+
+.trust-card h3{
+
+font-family:'Orbitron';
+
+font-size:24px;
+
+margin-bottom:15px;
+
+}
+
+
+
+.trust-card p{
+
+color:#bdbdbd;
+
+line-height:1.8;
+
+}
+
+
+
+
+/* ===========================
+COMING SOON
+=========================== */
+
+
+.exchange-section{
+
+background:
+
+radial-gradient(
+
+circle,
+
+rgba(212,175,55,.10),
+
+transparent 60%
+
+);
+
+}
+
+
+
+.exchange-box{
+
+max-width:900px;
+
+margin:auto;
+
+padding:70px;
+
+text-align:center;
+
+border-radius:40px;
+
+background:
+
+rgba(255,255,255,.05);
+
+border:
+
+1px solid rgba(212,175,55,.25);
+
+backdrop-filter:blur(25px);
+
+}
+
+
+
+.exchange-box span{
+
+color:var(--gold);
+
+letter-spacing:4px;
+
+}
+
+
+
+.exchange-box h2{
+
+font-family:'Orbitron';
+
+font-size:55px;
+
+margin:25px 0;
+
+}
+
+
+
+.exchange-box p{
+
+color:#bbb;
+
+font-size:20px;
+
+}
+
+
+
+.exchange-items{
+
+display:flex;
+
+justify-content:center;
+
+gap:25px;
+
+margin-top:45px;
+
+flex-wrap:wrap;
+
+}
+
+
+
+.exchange-items div{
+
+width:150px;
+
+height:80px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+border-radius:20px;
+
+background:
+
+rgba(255,255,255,.06);
+
+border:
+
+1px solid rgba(255,255,255,.12);
+
+font-family:'Orbitron';
+
+color:var(--gold);
+
+font-size:22px;
+
+}
+
+
+
+
+/* ===========================
+MOBILE
+=========================== */
+
+
+@media(max-width:900px){
+
+.trust-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+
+.exchange-box{
+
+padding:40px 20px;
+
+}
+
+
+.exchange-box h2{
+
+font-size:36px;
+
+}
+
+}
+
+
+
+@media(max-width:600px){
+
+.trust-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+#backTop{
+
+right:20px;
+
+bottom:20px;
+
+}
+
+}
 
