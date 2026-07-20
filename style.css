@@ -333,13 +333,13 @@ img {
 
     inset: 0;
 
-
-    background-image:
+background-image:
     linear-gradient(
         rgba(0,0,0,.45),
         rgba(0,0,0,.85)
     ),
     url("images/turkiye-nature.jpg");
+    
 
 
     background-size: cover;
