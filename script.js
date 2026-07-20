@@ -432,3 +432,229 @@ CONSOLE MESSAGE
 
 console.log("%c🇹🇷 TÜRKİYE TOKEN","font-size:28px;color:#d4af37;font-weight:bold;");
 console.log("%cBuilt with ❤️ for the Community","font-size:14px;color:white;");
+/* ==========================================================
+   PREMIUM EXTRAS SCRIPT
+   SCROLL + BACK TOP + LOADING
+========================================================== */
+
+
+/* ===========================
+SCROLL PROGRESS BAR
+=========================== */
+
+
+const progressBar = document.querySelector(".scroll-progress");
+
+
+window.addEventListener("scroll",()=>{
+
+
+const scrollTop = document.documentElement.scrollTop;
+
+const height =
+document.documentElement.scrollHeight -
+document.documentElement.clientHeight;
+
+
+const progress =
+(scrollTop / height) * 100;
+
+
+if(progressBar){
+
+progressBar.style.width = progress + "%";
+
+}
+
+
+});
+
+
+
+
+
+/* ===========================
+BACK TO TOP
+=========================== */
+
+
+const backTop =
+document.getElementById("backTop");
+
+
+window.addEventListener("scroll",()=>{
+
+
+if(!backTop) return;
+
+
+if(window.scrollY > 600){
+
+backTop.classList.add("show");
+
+
+}else{
+
+
+backTop.classList.remove("show");
+
+
+}
+
+
+});
+
+
+
+if(backTop){
+
+
+backTop.addEventListener("click",()=>{
+
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+
+});
+
+
+}
+
+
+
+
+/* ===========================
+PREMIUM LOADING
+=========================== */
+
+
+window.addEventListener("load",()=>{
+
+
+const loader =
+document.querySelector(".loading-screen");
+
+
+if(loader){
+
+
+setTimeout(()=>{
+
+
+loader.style.transition="1s";
+
+
+loader.style.opacity="0";
+
+
+setTimeout(()=>{
+
+
+loader.style.display="none";
+
+
+},1000);
+
+
+
+},1500);
+
+
+}
+
+
+});
+
+
+
+
+
+/* ===========================
+BUTTON RIPPLE EFFECT
+=========================== */
+
+
+document
+.querySelectorAll("a,button")
+.forEach(btn=>{
+
+
+btn.addEventListener("click",function(e){
+
+
+const ripple =
+document.createElement("span");
+
+
+ripple.className="ripple";
+
+
+this.appendChild(ripple);
+
+
+
+setTimeout(()=>{
+
+
+ripple.remove();
+
+
+},600);
+
+
+});
+
+
+});
+
+
+
+
+
+/* ===========================
+LIVE YEAR
+=========================== */
+
+
+document
+.querySelectorAll(".current-year")
+.forEach(el=>{
+
+
+el.textContent =
+new Date().getFullYear();
+
+
+});
+
+
+
+
+
+/* ===========================
+WELCOME MESSAGE
+=========================== */
+
+
+console.log(
+
+"%c🇹🇷 TÜRKİYE TOKEN",
+
+"font-size:30px;color:#d4af37;font-weight:bold;"
+
+);
+
+
+console.log(
+
+"%cThe Future Of Web3 Community",
+
+"font-size:15px;color:white;"
+
+);
