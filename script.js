@@ -1,244 +1,104 @@
-// ==========================
-// LOADING SCREEN
-// ==========================
+/* ==========================================================
+   TÜRKİYE TOKEN
+   PREMIUM SCRIPT.JS
+   PART 1
+========================================================== */
 
-window.addEventListener("load", () => {
 
-    const loader = document.querySelector(".loading-screen");
+/* ===========================
+LOADING SCREEN
+=========================== */
 
-    if(loader){
+window.addEventListener("load",()=>{
 
-        setTimeout(() => {
+const loader=document.querySelector(".loading-screen");
 
-            loader.style.opacity = "0";
-            loader.style.pointerEvents = "none";
+setTimeout(()=>{
 
-        }, 800);
+loader.style.opacity="0";
 
-    }
+loader.style.visibility="hidden";
+
+loader.style.pointerEvents="none";
+
+},1200);
 
 });
 
 
 
 
-// ==========================
-// COPY CONTRACT ADDRESS
-// ==========================
-
+/* ===========================
+COPY CONTRACT ADDRESS
+=========================== */
 
 function copyCA(){
 
+const input=document.getElementById("contractAddress");
 
-    const ca =
-    "5W9fU1hab4titQighG9x1m4c995379JZ2wjM4Ypdpump";
+navigator.clipboard.writeText(input.value);
 
-
-
-    navigator.clipboard.writeText(ca)
-    .then(()=>{
-
-
-        showToast(
-        "✅ Contract Address Copied"
-        );
-
-
-    });
-
+showToast("✅ Contract Address Copied");
 
 }
 
 
 
 
+/* ===========================
+TOAST NOTIFICATION
+=========================== */
 
+function showToast(text){
 
-// ==========================
-// TOAST MESSAGE
-// ==========================
+const toast=document.createElement("div");
 
+toast.className="toast";
 
-function showToast(message){
+toast.innerHTML=text;
 
+document.body.appendChild(toast);
 
-    const toast =
-    document.createElement("div");
+setTimeout(()=>{
 
+toast.classList.add("show");
 
-    toast.className =
-    "toast-message";
+},100);
 
+setTimeout(()=>{
 
-    toast.innerHTML =
-    message;
+toast.classList.remove("show");
 
+setTimeout(()=>{
 
+toast.remove();
 
-    document.body.appendChild(toast);
+},400);
 
-
-
-
-    setTimeout(()=>{
-
-
-        toast.classList.add("show");
-
-
-    },100);
-
-
-
-
-    setTimeout(()=>{
-
-
-        toast.classList.remove("show");
-
-
-
-        setTimeout(()=>{
-
-            toast.remove();
-
-        },500);
-
-
-
-    },3000);
-
-
+},2500);
 
 }
 
 
 
 
+/* ===========================
+SMOOTH SCROLL
+=========================== */
 
+document
 
+.querySelectorAll('a[href^="#"]')
 
-// ==========================
-// MOBILE MENU
-// ==========================
+.forEach(anchor=>{
 
-
-const menuBtn =
-document.querySelector(".mobile-menu-btn");
-
-const nav =
-document.querySelector(".navbar nav");
-
-
-
-if(menuBtn){
-
-
-menuBtn.addEventListener("click",()=>{
-
-
-    nav.classList.toggle("active");
-
-
-});
-
-
-}
-
-
-
-
-
-
-
-
-
-// ==========================
-// SCROLL REVEAL ANIMATION
-// ==========================
-
-
-
-const observer = new IntersectionObserver(
-(entries)=>{
-
-
-entries.forEach(entry=>{
-
-
-if(entry.isIntersecting){
-
-
-entry.target.classList.add("visible");
-
-
-}
-
-
-});
-
-
-},
-{
-threshold:0.15
-}
-
-);
-
-
-
-
-document.querySelectorAll(
-"section, .eco-card, .token-card, .road-card, .security-card"
-)
-.forEach((el)=>{
-
-
-el.classList.add("reveal");
-
-
-observer.observe(el);
-
-
-});
-
-
-
-
-
-
-
-
-
-// ==========================
-// SMOOTH NAVIGATION
-// ==========================
-
-
-document.querySelectorAll(
-'a[href^="#"]'
-)
-.forEach(link=>{
-
-
-link.addEventListener(
-"click",
-function(e){
-
-
-const target =
-document.querySelector(
-this.getAttribute("href")
-);
-
-
-
-if(target){
-
+anchor.addEventListener("click",function(e){
 
 e.preventDefault();
 
+const target=document.querySelector(this.getAttribute("href"));
 
+if(target){
 
 target.scrollIntoView({
 
@@ -246,589 +106,329 @@ behavior:"smooth"
 
 });
 
-
 }
 
-
-
 });
-
 
 });
 
 
 
 
+/* ===========================
+NAVBAR EFFECT
+=========================== */
 
+const header=document.querySelector("header");
 
+window.addEventListener("scroll",()=>{
 
+if(window.scrollY>80){
 
-// ==========================
-// HERO PARALLAX EFFECT
-// ==========================
+header.style.background="rgba(0,0,0,.82)";
 
+header.style.backdropFilter="blur(25px)";
 
-window.addEventListener(
-"scroll",
-()=>{
+header.style.boxShadow="0 15px 45px rgba(0,0,0,.35)";
 
+}else{
 
-const heroBg =
-document.querySelector(".hero-bg");
+header.style.background="transparent";
 
-
-if(heroBg){
-
-
-heroBg.style.transform =
-"scale(1.08) translateY("+
-window.scrollY * 0.15+
-"px)";
-
+header.style.boxShadow="none";
 
 }
-
-
 
 });
- 
-/* =====================
- EXTRA SECTIONS
-===================== */
 
 
 
-.why-section,
-.achievements-section,
-.movement-banner {
 
-    background:#050505;
+/* ===========================
+MOBILE MENU
+=========================== */
+
+const menu=document.getElementById("menu");
+
+const menuButton=document.getElementById("menuButton");
+
+menuButton.addEventListener("click",()=>{
+
+menu.classList.toggle("active");
+
+});
+
+
+
+
+/* ===========================
+MENU AUTO CLOSE
+=========================== */
+
+document
+
+.querySelectorAll("#menu a")
+
+.forEach(link=>{
+
+link.addEventListener("click",()=>{
+
+menu.classList.remove("active");
+
+});
+
+});
+/* ==========================================================
+   SCRIPT.JS PART 2 (FINAL)
+   COUNTERS • SCROLL ANIMATION • COIN EFFECTS
+   PARALLAX • MOUSE GLOW • ACTIVE MENU
+========================================================== */
+
+
+/* ===========================
+COUNTER ANIMATION
+=========================== */
+
+const counters=document.querySelectorAll(".counter");
+
+const counterObserver=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+const counter=entry.target;
+
+const target=+counter.dataset.target;
+
+let count=0;
+
+const speed=Math.max(10,Math.floor(target/100));
+
+const update=()=>{
+
+count+=speed;
+
+if(count>=target){
+
+counter.innerText=target;
+
+}else{
+
+counter.innerText=count;
+
+requestAnimationFrame(update);
+
+}
+
+};
+
+update();
+
+counterObserver.unobserve(counter);
+
+}
+
+});
+
+},{threshold:.5});
+
+counters.forEach(counter=>counterObserver.observe(counter));
+
+
+
+
+/* ===========================
+SCROLL REVEAL
+=========================== */
+
+const reveals=document.querySelectorAll(
+
+".info-card,.ecosystem-card,.feature-card,.step-card,.security-card,.timeline-card,.vision-card,.partner-card,.stat-card,.token-card"
+
+);
+
+reveals.forEach(el=>{
+
+el.style.opacity="0";
+
+el.style.transform="translateY(60px)";
+
+el.style.transition=".8s ease";
+
+});
+
+const revealObserver=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity="1";
+
+entry.target.style.transform="translateY(0)";
+
+revealObserver.unobserve(entry.target);
+
+}
+
+});
+
+},{threshold:.15});
+
+reveals.forEach(el=>revealObserver.observe(el));
+
+
+
+
+/* ===========================
+MOUSE GLOW EFFECT
+=========================== */
+
+const glow=document.createElement("div");
+
+glow.className="cursor-glow";
+
+document.body.appendChild(glow);
+
+document.addEventListener("mousemove",e=>{
+
+glow.style.left=e.clientX+"px";
+
+glow.style.top=e.clientY+"px";
+
+});
+
+
+
+
+/* ===========================
+PARALLAX
+=========================== */
+
+window.addEventListener("scroll",()=>{
+
+const y=window.pageYOffset;
+
+const hero=document.querySelector(".hero-image img");
+
+const future=document.querySelector(".future-background img");
+
+const community=document.querySelector(".community-bg img");
+
+if(hero){
+
+hero.style.transform=`translateY(${y*0.18}px) scale(1.1)`;
+
+}
+
+if(future){
+
+future.style.transform=`translateY(${y*0.10}px) scale(1.08)`;
+
+}
+
+if(community){
+
+community.style.transform=`translateY(${y*0.08}px) scale(1.08)`;
+
+}
+
+});
+
+
+
+
+/* ===========================
+COIN HOVER EFFECT
+=========================== */
+
+const coin=document.querySelector(".hero-coin");
+
+if(coin){
+
+document.addEventListener("mousemove",e=>{
+
+const x=(window.innerWidth/2-e.clientX)/40;
+
+const y=(window.innerHeight/2-e.clientY)/40;
+
+coin.style.transform=`rotateY(${x}deg) rotateX(${-y}deg)`;
+
+});
 
 }
 
 
 
 
+/* ===========================
+ACTIVE MENU
+=========================== */
 
-.why-grid {
+const sections=document.querySelectorAll("section");
 
+const navLinks=document.querySelectorAll("#menu a");
 
-    display:grid;
+window.addEventListener("scroll",()=>{
 
-    grid-template-columns:
+let current="";
 
-    repeat(4,1fr);
+sections.forEach(section=>{
 
+const top=section.offsetTop-150;
 
-    gap:25px;
+const height=section.offsetHeight;
 
+if(pageYOffset>=top){
 
-}
-
-
-
-
-
-.why-card {
-
-
-    padding:35px 25px;
-
-
-    text-align:center;
-
-
-    border-radius:25px;
-
-
-    background:
-
-    rgba(255,255,255,.05);
-
-
-    border:
-
-    1px solid rgba(212,175,55,.2);
-
-
-    transition:.4s;
-
+current=section.getAttribute("id");
 
 }
 
+});
 
+navLinks.forEach(link=>{
 
+link.classList.remove("active");
 
+if(link.getAttribute("href")==="#"+current){
 
-.why-card div {
-
-
-    font-size:45px;
-
-    margin-bottom:20px;
-
+link.classList.add("active");
 
 }
 
+});
 
+});
 
 
 
-.why-card h3 {
 
+/* ===========================
+RANDOM FLOATING EFFECT
+=========================== */
 
-    color:var(--gold);
+document.querySelectorAll(".floating-card").forEach(card=>{
 
-    margin-bottom:15px;
+setInterval(()=>{
 
+const x=(Math.random()*12)-6;
 
-}
+const y=(Math.random()*12)-6;
 
+card.style.transform=`translate(${x}px,${y}px)`;
 
+},3000);
 
+});
 
 
-.why-card p {
 
 
-    color:#aaa;
+/* ===========================
+CONSOLE MESSAGE
+=========================== */
 
-    line-height:1.7;
-
-
-}
-
-
-
-
-
-.why-card:hover {
-
-
-    transform:translateY(-10px);
-
-
-    border-color:var(--gold);
-
-
-}
-
-
-
-
-
-
-
-
-
-/* =====================
- ACHIEVEMENTS
-===================== */
-
-
-.achievement-grid {
-
-
-    display:grid;
-
-    grid-template-columns:
-
-    repeat(4,1fr);
-
-    gap:25px;
-
-
-}
-
-
-
-
-.achievement-card {
-
-
-    padding:35px;
-
-
-    text-align:center;
-
-
-    border-radius:25px;
-
-
-    background:
-
-    linear-gradient(
-    145deg,
-    rgba(217,4,41,.15),
-    rgba(212,175,55,.08)
-    );
-
-
-    border:
-
-    1px solid rgba(212,175,55,.3);
-
-
-}
-
-
-
-
-
-.achievement-card strong {
-
-
-    display:block;
-
-
-    font-size:40px;
-
-
-    color:var(--gold);
-
-
-    font-family:'Orbitron';
-
-
-}
-
-
-
-
-
-.achievement-card span {
-
-
-    color:#ddd;
-
-
-}
-
-
-
-
-
-
-
-
-
-/* =====================
- MOVEMENT BANNER
-===================== */
-
-
-.movement-box {
-
-
-    text-align:center;
-
-
-    padding:80px 30px;
-
-
-    border-radius:40px;
-
-
-    background:
-
-
-    linear-gradient(
-    135deg,
-    rgba(217,4,41,.35),
-    rgba(212,175,55,.15)
-    );
-
-
-    border:
-
-    1px solid rgba(212,175,55,.4);
-
-
-}
-
-
-
-
-
-.movement-box h2 {
-
-
-    font-size:50px;
-
-
-    margin-bottom:20px;
-
-
-}
-
-
-
-
-
-.movement-box p {
-
-
-    color:#ddd;
-
-
-    margin-bottom:35px;
-
-
-}
-
-
-
-
-
-.movement-buttons {
-
-
-    display:flex;
-
-
-    justify-content:center;
-
-
-    gap:20px;
-
-
-    flex-wrap:wrap;
-
-
-}
-
-
-
-
-
-
-
-
-
-/* =====================
- REVEAL ANIMATION
-===================== */
-
-
-.reveal {
-
-
-    opacity:0;
-
-
-    transform:translateY(40px);
-
-
-    transition:1s ease;
-
-
-}
-
-
-
-
-
-.reveal.visible {
-
-
-    opacity:1;
-
-
-    transform:translateY(0);
-
-
-}
-
-
-
-
-
-
-
-
-
-/* =====================
- TOAST
-===================== */
-
-
-.toast-message {
-
-
-    position:fixed;
-
-
-    bottom:30px;
-
-
-    left:50%;
-
-
-    transform:
-    translateX(-50%)
-    translateY(100px);
-
-
-    background:#111;
-
-
-    color:white;
-
-
-    padding:15px 30px;
-
-
-    border-radius:50px;
-
-
-    border:
-
-    1px solid var(--gold);
-
-
-    z-index:99999;
-
-
-    transition:.4s;
-
-
-}
-
-
-
-
-
-.toast-message.show {
-
-
-    transform:
-    translateX(-50%)
-    translateY(0);
-
-
-}
-
-
-
-
-
-
-
-
-
-/* =====================
- MOBILE MENU
-===================== */
-
-
-.mobile-menu-btn {
-
-
-    display:none;
-
-
-    background:none;
-
-
-    border:none;
-
-
-    color:white;
-
-
-    font-size:28px;
-
-
-}
-
-
-
-
-
-@media(max-width:900px){
-
-
-
-.mobile-menu-btn {
-
-
-    display:block;
-
-
-}
-
-
-
-
-.navbar nav {
-
-
-    position:absolute;
-
-
-    top:80px;
-
-
-    left:0;
-
-
-    width:100%;
-
-
-    background:#050505;
-
-
-    flex-direction:column;
-
-
-    align-items:center;
-
-
-    padding:30px;
-
-
-    display:none;
-
-
-}
-
-
-
-
-
-.navbar nav.active {
-
-
-    display:flex;
-
-
-}
-
-
-
-
-
-.why-grid,
-.achievement-grid {
-
-
-    grid-template-columns:1fr;
-
-
-}
-
-
-
-
-
-.movement-box h2 {
-
-
-    font-size:32px;
-
-
-}
-
-
-
-}
+console.log("%c🇹🇷 TÜRKİYE TOKEN","font-size:28px;color:#d4af37;font-weight:bold;");
+console.log("%cBuilt with ❤️ for the Community","font-size:14px;color:white;");
